@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 57% 17%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 57% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 57% 17%;
+    --primary: 222 57% 17%;
+    --primary-foreground: 37 33% 87%;
+    --secondary: 225 33% 44%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 37 33% 87%;
+    --muted-foreground: 222 30% 36%;
+    --accent: 37 33% 87%;
+    --accent-foreground: 222 57% 17%;
+    --border: 37 20% 80%;
+    --input: 37 20% 80%;
+    --ring: 225 33% 44%;
+    --radius: 0.5rem;
+
+    /* Custom palette */
+    --navy: #111844;
+    --indigo: #4B5694;
+    --steel: #7288AE;
+    --cream: #EAE0CF;
+  }
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Inter Variable', 'Inter', sans-serif;
+}
