@@ -1,42 +1,84 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tw-animate-css";
 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222 57% 17%;
-    --card: 0 0% 100%;
-    --card-foreground: 222 57% 17%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 57% 17%;
-    --primary: 222 57% 17%;
-    --primary-foreground: 37 33% 87%;
-    --secondary: 225 33% 44%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 37 33% 87%;
-    --muted-foreground: 222 30% 36%;
-    --accent: 37 33% 87%;
-    --accent-foreground: 222 57% 17%;
-    --border: 37 20% 80%;
-    --input: 37 20% 80%;
-    --ring: 225 33% 44%;
-    --radius: 0.5rem;
+@custom-variant dark (&:is(.dark *));
 
-    /* Custom palette */
-    --navy: #111844;
-    --indigo: #4B5694;
-    --steel: #7288AE;
-    --cream: #EAE0CF;
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222 57% 17%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 57% 17%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 57% 17%;
+  --primary: 222 57% 17%;
+  --primary-foreground: 37 33% 87%;
+  --secondary: 225 33% 44%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 37 33% 87%;
+  --muted-foreground: 222 30% 36%;
+  --accent: 37 33% 87%;
+  --accent-foreground: 222 57% 17%;
+  --border: 37 20% 80%;
+  --input: 37 20% 80%;
+  --ring: 225 33% 44%;
+  --radius: 0.5rem;
+
+  /* Custom palette */
+  --navy: #111844;
+  --indigo: #4B5694;
+  --steel: #7288AE;
+  --cream: #EAE0CF;
+}
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-navy: var(--navy);
+  --color-indigo: var(--indigo);
+  --color-steel: var(--steel);
+  --color-cream: var(--cream);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
   }
 }
 
-* {
-  border-color: hsl(var(--border));
-}
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
 
-body {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
-  font-family: 'Inter Variable', 'Inter', sans-serif;
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter Variable', 'Inter', sans-serif;
+  }
 }
