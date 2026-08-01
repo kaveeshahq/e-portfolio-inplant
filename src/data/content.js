@@ -104,41 +104,283 @@ I am always eager to learn, collaborate, and contribute to the field of nutritio
       "Wayamba University",
       "Community Nutrition",
     ],
+
+    family: {
+      title: "Family Background",
+      content: `I come from a supportive and close-knit family that has always encouraged me to pursue my education and personal development. Their guidance, values, and encouragement have helped shape my character, work ethic, and commitment to achieving my goals. They have always inspired me to work hard, remain humble, and contribute positively to society.`,
+    },
+
+    university: {
+      title: "What I Did During University",
+      items: [
+        "Successfully completed a Bachelor's degree.",
+        "Participated in academic research projects.",
+        "Conducted presentations, seminars, and group discussions.",
+        "Worked collaboratively on group assignments and research projects.",
+        "Developed report writing and documentation skills.",
+        "Improved leadership and communication through extracurricular activities.",
+        "Participated in community engagement and volunteer activities.",
+        "Strengthened analytical and problem-solving skills through coursework and practical projects.",
+        "Built professional relationships with lecturers, peers, and industry professionals.",
+        "Learned to balance academics, project work, and extracurricular responsibilities.",
+      ],
+    },
+
+    traits: {
+      title: "Strengths & Areas for Improvement",
+      strengths: [
+        "Strong willingness to learn and adapt quickly to new environments.",
+        "Excellent teamwork and collaboration skills.",
+        "Good communication and interpersonal skills.",
+        "Problem-solving and analytical thinking.",
+        "Responsible, reliable, and self-motivated.",
+        "Ability to work under pressure and meet deadlines.",
+        "Positive attitude and professional work ethic.",
+        "Strong organizational and time management skills.",
+        "Attention to detail.",
+        "Leadership and coordination abilities gained through university activities.",
+      ],
+      weaknesses: [
+        "I occasionally become too focused on details, but I am learning to balance quality with efficiency.",
+        "I can be hesitant to delegate tasks because I like to ensure everything is completed properly.",
+        "Public speaking made me nervous in the past, but I have improved through presentations and university activities.",
+      ],
+    },
+
+    goals: {
+      title: "Career Goals",
+      shortTerm: [
+        "To begin my career in a professional organization where I can apply my academic knowledge and continuously improve my technical and interpersonal skills.",
+        "To contribute effectively to organizational goals while gaining practical experience and learning from industry professionals.",
+      ],
+      longTerm: [
+        "To become a skilled professional in my field, take on leadership responsibilities, and contribute to meaningful projects that create a positive impact on society.",
+        "To pursue continuous learning through certifications, research, and professional development.",
+      ],
+    },
+
+    hobbies: {
+      title: "Hobbies & Interests",
+      items: [
+        "Reading technology and research articles",
+        "Learning new technologies and software tools",
+        "Community service and volunteering",
+        "Traveling and exploring new places",
+        "Sports and fitness",
+        "Watching educational content",
+        "Team activities and networking",
+      ],
+    },
+
+    values: {
+      title: "Personal Values",
+      items: [
+        "Integrity",
+        "Responsibility",
+        "Respect",
+        "Teamwork",
+        "Continuous Learning",
+        "Professionalism",
+        "Accountability",
+        "Compassion",
+      ],
+    },
   },
   course: {
     title: "About the Course Module",
-    content: `Replace with details about the in-plant training module — its objectives, credit value, what students are expected to achieve, etc.`,
+    name: "In-Plant Training",
+    tags: ["Credited course unit", "Compulsory for graduation", "Full-time placement"],
+
+    content: `In-Plant Training is aimed at providing undergraduates an opportunity to acquire knowledge, relate theoretical knowledge with application in the working placement, develop skills, and build confidence in handling situations in a real working environment — in food industries, government institutions, and community-based food and nutrition programmes in both government and non-government organizations.
+
+During the period of training, the trainee is expected to observe and build up the necessary skills, making use of the facilities provided by the establishment and occupying the full time allocated. The exposure to the industrial and institutional environment helps students develop their soft skills and work experience, facilitating a gradual transition from academia to career.
+
+In-Plant Training is a credited course programme and is therefore compulsory to satisfy the degree requirements for graduation.`,
+
+    aims: {
+      title: "Course Aims",
+      items: [
+        "To understand and gain hands-on experience of the real working environment in different institutions and communities.",
+        "To develop the minimum skills needed to maintain and manage the operational systems of establishments.",
+        "To acquire strength, interpersonal skills, teamwork spirit, and confidence in handling formal and informal human relationships in the real working environment.",
+        "To contribute to the development of the student by providing responsibility matched to their level of knowledge, experience, and potential.",
+        "To provide an opportunity for the industry to identify potential employees and to feed back comments on the degree programme.",
+      ],
+    },
+
+    buildsOn: {
+      title: "Relationship to Other Courses",
+      content: `This course unit applies the theoretical knowledge students obtained from the following course units:`,
+      items: [
+        "Nutrition Assessment",
+        "Diet and Diseases",
+        "Sociology of Food and Nutrition",
+        "Public Health and Nutrition",
+        "Communication and Health Promotion",
+        "Field Assignment in Nutrition",
+      ],
+    },
+
+    outcomes: {
+      title: "Intended Learning Outcomes",
+      content: `On successful completion of this module, students should be able to:`,
+      items: [
+        "Identify scientific and technical issues of the industry or organization related to their processes, products, or services, and work cooperatively towards possible solutions.",
+        "Identify economic, commercial, environmental, and sustainability considerations within the industry or organization.",
+        "Demonstrate skills in communication, management, and teamwork.",
+        "Demonstrate potential for logical thinking, problem solving, and independent learning.",
+        "Follow the ethical basis of professional practice in the relevant industry or organization.",
+        "Make a gradual transition from academia to career.",
+      ],
+    },
+
+    responsibilities: {
+      title: "Roles & Responsibilities Expected from Students",
+      items: [
+        "Adhere to the university and host company’s rules and regulations.",
+        "Follow the host company’s safety procedures.",
+        "Maintain good discipline and personal conduct.",
+        "Dress professionally.",
+        "Be punctual for work and adhere to the working hours and working days. In case of difficulties, approach the industry supervisor.",
+        "Maintain excellent relations with supervisors.",
+        "Listen to and follow the supervisor’s instructions.",
+        "Show enthusiasm for the work assigned.",
+        "Meet work schedules on time.",
+        "Do not record any information or copy out any drawings or formulas without proper permission.",
+        "Do not operate any instrument, machine, or apparatus without specific instruction from the supervisor and under their supervision.",
+        "Maintain confidentiality of all work material and do not share any information related to the organization with third parties.",
+        "Maintain a logbook to write down important notes — this helps in completing the weekly reports.",
+        "Become familiar with the various learning materials and resources available for work.",
+        "Obtain prior approval from the respective academic supervisor and company before leaving the current placement.",
+        "Complete and submit the training plan, weekly diary reports, and final summary report on time.",
+      ],
+    },
   },
   organization: {
     title: "About the Organization",
-    content: `The Scaling Up Nutrition People’s Forum (SUN PF) is the Civil Society Alliance (CSA) branch of the global Scaling Up Nutrition (SUN) Movement operating in Sri Lanka. Established in 2014, it operates as an independent, registered organization that brings together over 300 Civil Society Organizations (CSOs) across 23 districts, along with non-governmental organizations, professional groups, and individuals.
-
-To understand SUN PF, it helps to look at the broader global initiative it stems from:
-
-The Global SUN Movement: Launched in 2010, the SUN Movement is a country-led, collaborative global advocacy platform. It is built on the core principle that every person has a fundamental right to food and good nutrition. The movement unites diverse stakeholders—including civil society, donors, businesses, and the United Nations—to put an end to all forms of malnutrition.
-
-The Global Vision: The overarching goal is to achieve a world free from malnutrition in all its forms by the year 2030.
-
-SUN PF's Specific Role in Sri Lanka
-While Sri Lanka officially joined the SUN Movement in 2012, SUN PF drives the grassroots and civil society efforts on the ground.
-
-Vision: SUN PF works toward ending hunger and malnutrition so that every mother, child, and family can realize their full potential and access adequate nutritious food within their lifetime.
-
-Mission: The forum initiates and sustains a multi-sector coalition of civil society organizations to advocate for, monitor, and contribute to national and district-level nutrition interventions.
-
-Core Activities and Impact
-SUN PF focuses on both high-level policy advocacy and direct community action. Their day-to-day operations include:
-
-Assisting in the creation of nutrition-related policies, strategies, and action plans.
-
-Conducting mass media, social media, and behavioral change campaigns to educate the public.
-
-Promoting community-level food security through home and school gardening initiatives.
-
-Engaging in direct interventions such as nutrition screenings, capacity-building training, exhibitions, and empowering local communities to adopt better food habits and hygiene.
-
-Holding responsible parties accountable for implementing nutrition plans across different sectors.`,
+    name: "Scaling Up Nutrition People’s Forum (SUN PF) Sri Lanka",
     website: "https://suncsasrilanka.lk/",
+
+    content: `The Scaling Up Nutrition People’s Forum (SUN PF) is the Civil Society Alliance (CSA) of the global Scaling Up Nutrition (SUN) Movement in Sri Lanka. It is an independent, registered civil society organization that brings together NGOs, community-based organizations, professional bodies, researchers, youth organizations, and development partners to improve nutrition and eliminate malnutrition across the country.
+
+The organization works closely with the Sri Lankan Government, United Nations agencies, civil society organizations, donors, and the private sector to strengthen national nutrition initiatives and improve the wellbeing of vulnerable communities.`,
+
+    stats: [
+      { value: "2014", label: "Established in Sri Lanka" },
+      { value: "300+", label: "Member organizations" },
+      { value: "23", label: "District networks" },
+      { value: "2010", label: "Global SUN Movement launched" },
+    ],
+
+    global: {
+      title: "Global Background",
+      content: `The Scaling Up Nutrition (SUN) Movement is an international initiative launched by the United Nations Secretary-General in 2010. Its mission is to eliminate all forms of malnutrition by bringing together governments, UN agencies, civil society, donors, businesses, and research institutions. Sri Lanka officially joined the SUN Movement in 2012.
+
+Today the SUN Civil Society Network includes more than 5,000 member organizations across 56 country alliances in Asia, Africa, Latin America, and the Caribbean — thousands of professionals working toward Sustainable Development Goal 2 (Zero Hunger). SUN PF is part of this international movement, not simply a Sri Lankan NGO.
+
+The Scaling Up Nutrition Civil Society Alliance Sri Lanka (SUN CSA) was established in 2014 as the national civil society network under the global SUN Movement, with the purpose of creating a strong national coalition that promotes sustainable improvements in nutrition throughout Sri Lanka.`,
+    },
+
+    vision: `Working together to end hunger and malnutrition in all its forms so that every mother, child, and family can realize their full potential and right to adequate nutritious food.`,
+
+    mission: `To initiate and sustain a multi-sector coalition of civil society organizations that advocates for, monitors, and contributes to nutrition interventions at both national and district levels.`,
+
+    objectives: [
+      "Strengthening nutrition-related policies and accountability",
+      "Building stakeholder capacity through education and training",
+      "Supporting community nutrition interventions through multi-sector collaboration",
+      "Strengthening governance and sustainability of the Civil Society Alliance",
+    ],
+
+    activities: [
+      "Nutrition policy development",
+      "High-level advocacy",
+      "Community awareness campaigns",
+      "School nutrition programs",
+      "Maternal and child nutrition interventions",
+      "Home gardening promotion",
+      "School gardening programs",
+      "Nutrition education",
+      "Community research",
+      "Public health awareness",
+      "Nutrition screenings",
+      "Capacity-building workshops",
+      "Stakeholder training",
+      "Development of educational materials",
+      "Monitoring national nutrition action plans",
+      "Community empowerment programs",
+    ],
+
+    network: {
+      title: "District Network",
+      content: `Unlike many NGOs that operate from only a few branches, SUN PF works through district civil society networks. Around 300 civil society organizations are members across 23 districts, and each district has its own coordinator and partner organizations.`,
+      districts: [
+        "Jaffna",
+        "Badulla",
+        "Monaragala",
+        "Galle",
+        "Matara",
+        "Hambantota",
+        "Kalutara",
+        "Kegalle",
+        "Colombo (being re-established)",
+        "Gampaha (under establishment)",
+      ],
+    },
+
+    partners: [
+      "World Vision Lanka",
+      "Save the Children Sri Lanka",
+      "ChildFund Sri Lanka",
+      "Sevalanka Foundation",
+      "Sarvodaya Shramadana Movement",
+      "ADRA Sri Lanka",
+      "Nutrition Society of Sri Lanka",
+      "National Nutrition Council",
+      "Government ministries",
+      "United Nations agencies",
+    ],
+
+    governance: [
+      "Board of Directors",
+      "Executive Council",
+      "Project Secretariat",
+      "District Coordinators",
+      "Youth Network",
+      "Member Organizations",
+    ],
+
+    impact: {
+      title: "Community Impact",
+      content: `SUN PF works directly with vulnerable communities through household nutrition assessments, family development plans, school and women's nutrition programs, child nutrition programs, food security initiatives, community behaviour change campaigns, and capacity building for local stakeholders.
+
+One recent example is the implementation of the Multi-Sectoral Action Plan on Nutrition (MSAPN) in Sorivila, Polonnaruwa, where staff and university interns conducted approximately 300 household surveys and developed 100 family development plans to improve nutrition, hygiene, and livelihoods.`,
+    },
+
+    learning: {
+      title: "Why This Placement Matters",
+      items: [
+        "Community development",
+        "Public health nutrition",
+        "Research and data collection",
+        "Stakeholder engagement",
+        "Government collaboration",
+        "NGO project management",
+        "Capacity building",
+        "Monitoring and evaluation",
+        "Policy implementation",
+        "Sustainable Development Goals",
+        "Multi-sector collaboration",
+        "Field operations",
+      ],
+    },
+
+    office: {
+      title: "Head Office",
+      address: "120 A, Srimath Anagarika Dharmapala Mawatha, Colombo 07, Sri Lanka",
+      phone: "+94 76 4700868",
+      email: "sun.pfsl@gmail.com",
+    },
   },
 };
 
@@ -809,35 +1051,91 @@ export const weeks = [
   },
 ];
 
-export const swot = {
-  strengths: [
-    "Strong theoretical foundation in Food Science & Nutrition",
-    "Good communication and interpersonal skills",
-    "Adaptability to field environments",
-    "Add more...",
-  ],
-  weaknesses: [
-    "Limited prior field experience",
-    "Language barrier with some community members",
-    "Add more...",
-  ],
-  opportunities: [
-    "Exposure to real-world community nutrition programs",
-    "Networking with nutrition professionals",
-    "Add more...",
-  ],
-  threats: [
-    "Time constraints in the field",
-    "Unpredictable weather conditions during field visits",
-    "Add more...",
-  ],
-};
-
 export const reflections = {
-  overall: `Replace with Shehani's overall reflection on the 10-week internship — what it meant to her, how she grew, key takeaways.`,
-  academic: `Replace with how the internship connected to her academic studies.`,
-  personal: `Replace with personal growth observations.`,
-  future: `Replace with future goals inspired by this experience.`,
+  stats: [
+    { value: "10", label: "Weeks of training" },
+    { value: "10+", label: "Field sites visited" },
+    { value: "3", label: "SAM clinics supported" },
+    { value: "4", label: "Awareness sessions delivered" },
+  ],
+
+  overall: {
+    content: `My in-plant training began on 21st April 2026 at the SUN PF head office in Colombo, where I was introduced to the organization's history, hierarchy, projects, focal points, SUN 4.0, and the wider SUN Civil Society Network. In those first days everything was still theory — a Terms of Reference to understand, a SUN map and trend analysis to prepare, a quiz to sit. Ten weeks later I was standing in front of a community in Thaldena delivering an awareness session on the food plate model and the Food-Based Dietary Guidelines. The distance between those two moments is what this training gave me.
+
+The bulk of my placement was spent with the Badulla Division, and the work was genuinely varied. I designed and piloted a KAP questionnaire, prepared pre- and post-evaluation forms, and conducted a Training of Trainers session that ran for an hour and fifteen minutes. I carried out a literature review on the current nutrition situation in Badulla District and summarised the key findings. I collected data at the Badulla SAM clinic and at outreach clinics in Meegahakiula and Passara, and joined dry ration distribution and meal enrichment programmes at safety centres across Soranathota, Kanawarella, Lunugala, Passara Uri Estate, Alubogolla, Memale, and Kandegedara.
+
+What I did not expect was how much of nutrition work happens away from nutrition itself. I sat in meetings with the Planning Director of the Badulla District Secretariat and with the Divisional Secretary at Passara. I built an action plan for ongoing CSO projects and helped finalise the report for the dry ration distribution programme. I learned that a well-designed intervention is only as good as the coordination, paperwork, and relationships holding it up — and that this administrative layer is not a distraction from the work, it is the work.
+
+The most valuable lesson was about the gap between a nutrition problem on paper and a nutrition problem in a household. A severely acutely malnourished child in a textbook is a set of anthropometric cut-offs. At a SAM clinic, that same child arrives with a family, an income, a distance to travel, and a set of constraints that no guideline fully anticipates. Learning to hold both the science and the circumstance at once is the single biggest shift this placement produced in me.`,
+    takeaways: [
+      "Community nutrition succeeds or fails on relationships and coordination as much as on technical accuracy.",
+      "Field data is messier than classroom data, and designing tools that survive contact with real respondents is a distinct skill.",
+      "Multi-sector work means speaking the language of planners, secretariats, and health staff — not only that of nutritionists.",
+      "Small, well-delivered interventions in a single safety centre can matter as much as large-scale plans.",
+    ],
+  },
+
+  academic: {
+    content: `This placement was where my degree stopped being a set of separate modules and started behaving like one connected discipline. Almost every course unit I had studied showed up in the field, usually in a form I had not anticipated.`,
+    links: [
+      {
+        unit: "Nutrition Assessment",
+        applied: "Collecting data at the Badulla SAM clinic and the Meegahakiula and Passara outreach clinics, and compiling figures on pregnant mothers, lactating mothers, and under-five children in the Ella MOH area.",
+      },
+      {
+        unit: "Public Health and Nutrition",
+        applied: "Working within the Multi-Sectoral Action Plan on Nutrition framework, coordinating with MOH areas and Divisional Secretariats, and supporting district-level dry ration distribution.",
+      },
+      {
+        unit: "Communication and Health Promotion",
+        applied: "Practising Training of Trainers methodology, conducting community awareness sessions on FBDGs and the food plate model, and designing education materials and posters.",
+      },
+      {
+        unit: "Sociology of Food and Nutrition",
+        applied: "Working across estate communities, Tamil-medium schools, and safety centres, where food choices are shaped by income, geography, and access long before they are shaped by knowledge.",
+      },
+      {
+        unit: "Diet and Diseases",
+        applied: "Understanding severe acute malnutrition in clinical practice and contributing to meal enrichment programmes designed around real dietary gaps.",
+      },
+      {
+        unit: "Field Assignment in Nutrition",
+        applied: "Designing and piloting a KAP/KAB questionnaire, building pre- and post-evaluation forms, and conducting a literature review on the Badulla District nutrition situation.",
+      },
+    ],
+    closing: `The reverse was also true: the field sent me back to my notes. After the first SAM clinic I re-read my Nutrition Assessment material with completely different attention, because I finally knew what the numbers were for.`,
+  },
+
+  personal: {
+    content: `The change I am most aware of is in how I speak to people. Presenting has always made me nervous, and in my first week the idea of standing in front of a community group was genuinely daunting. By week two I was conducting a Training of Trainers session; by week eight I was leading an awareness session in Thaldena; by week nine I was presenting to parents of pre-school children. The nerves did not disappear, but they stopped deciding what I was willing to attempt.
+
+I also had to learn to work at the pace of the field. I like to check things thoroughly and I am reluctant to hand work over before I am satisfied with it — a habit that serves me well in a report and badly in a distribution queue. Working alongside SUN PF staff who had to make good decisions quickly taught me to judge when accuracy matters most and when momentum matters more.
+
+Working across Badulla's estate communities, Tamil-medium schools, and remote safety centres also stretched me in a way university never had. Explaining a dietary guideline to someone whose constraints are completely different from my own required me to stop reciting and start listening. I became noticeably better at reading a room, adjusting my language, and asking a question rather than delivering an answer.`,
+    growth: [
+      "Confidence in public speaking, built through repeated sessions rather than preparation alone",
+      "Balancing thoroughness with the pace real fieldwork demands",
+      "Communicating technical nutrition content in plain, practical language",
+      "Professional conduct with senior government officials and organizational partners",
+      "Resilience across long field days, travel, and changing schedules",
+      "Listening to communities before prescribing to them",
+    ],
+  },
+
+  future: {
+    content: `Before this placement my interest in nutrition was mostly academic and product-facing. Ten weeks in Badulla added a dimension I had not seriously considered: that the most useful thing I can do with this degree may be applied, community-facing, and deeply unglamorous.
+
+I want to begin my career in an organization where I can keep doing work of this kind — applying what I have studied, learning from experienced professionals, and contributing to something measurable. In the longer term I want to grow into a role where I can lead nutrition programmes rather than support them, and to keep building the technical foundation for that through further study, certification, and research.
+
+What I am taking forward most concretely is an interest in the space where nutrition science meets implementation: the questionnaires, the evaluation forms, the action plans, the coordination between a Divisional Secretariat and a safety centre. That is where good intentions either become outcomes or quietly do not. I would like to spend my career on the side that makes them outcomes.`,
+    items: [
+      "Build a career in applied community nutrition or public health nutrition",
+      "Deepen skills in nutrition assessment, survey design, and programme monitoring and evaluation",
+      "Contribute to research on nutrition interventions in Sri Lankan estate and rural communities",
+      "Pursue postgraduate study and professional certification in nutrition or public health",
+      "Grow into a role leading nutrition programmes and mentoring incoming trainees",
+    ],
+  },
 };
 
 export const faqs = [
