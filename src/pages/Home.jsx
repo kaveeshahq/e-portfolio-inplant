@@ -10,7 +10,7 @@ import orgLogo from "../assets/logo.png"
 const stats = [
   { icon: Calendar, label: "Duration", value: siteInfo.duration },
   { icon: MapPin, label: "Division", value: siteInfo.division },
-  { icon: GraduationCap, label: "Degree", value: "B.Sc (Hons) Food Science" },
+  { icon: GraduationCap, label: "Degree", value: "B.Sc (Hons) Food Science and Nutrition" },
   { icon: Building2, label: "University", value: "Wayamba University of Sri Lanka" },
 ]
 

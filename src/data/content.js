@@ -1,5 +1,3 @@
-import w2img1 from "../assets/weeks/week2/img1.png";
-import w2img2 from "../assets/weeks/week2/img2.png";
 import w4img1 from "../assets/weeks/week4/img1.jpeg";
 import w4img2 from "../assets/weeks/week4/img2.jpeg";
 import w4img3 from "../assets/weeks/week4/img3.jpeg";
@@ -107,7 +105,9 @@ I am always eager to learn, collaborate, and contribute to the field of nutritio
 
     family: {
       title: "Family Background",
-      content: `I come from a supportive and close-knit family that has always encouraged me to pursue my education and personal development. Their guidance, values, and encouragement have helped shape my character, work ethic, and commitment to achieving my goals. They have always inspired me to work hard, remain humble, and contribute positively to society.`,
+      content: `I come from a supportive and hardworking family that has played a significant role in my academic and personal journey. My father is a retired Police Officer who instilled in me the values of discipline, integrity, and perseverance. My mother is employed at the National Institute of Health Sciences (NIHS), Kalutara, and has always encouraged me to pursue my education with dedication.
+
+I have two sisters. My elder sister works at the Teaching Hospital, Kalutara, while my younger sister is studying at the Faculty of Technology, Eastern University, Sri Lanka. Throughout my journey, my family has been my greatest source of motivation and support. Their constant encouragement, sacrifices, and belief in my abilities have inspired me to work hard, overcome challenges, and strive toward achieving my personal and professional goals.`,
     },
 
     university: {
@@ -189,7 +189,11 @@ I am always eager to learn, collaborate, and contribute to the field of nutritio
   course: {
     title: "About the Course Module",
     name: "In-Plant Training",
-    tags: ["Credited course unit", "Compulsory for graduation", "Full-time placement"],
+    tags: [
+      "Credited course unit",
+      "Compulsory for graduation",
+      "Full-time placement",
+    ],
 
     content: `In-Plant Training is aimed at providing undergraduates an opportunity to acquire knowledge, relate theoretical knowledge with application in the working placement, develop skills, and build confidence in handling situations in a real working environment — in food industries, government institutions, and community-based food and nutrition programmes in both government and non-government organizations.
 
@@ -377,7 +381,8 @@ One recent example is the implementation of the Multi-Sectoral Action Plan on Nu
 
     office: {
       title: "Head Office",
-      address: "120 A, Srimath Anagarika Dharmapala Mawatha, Colombo 07, Sri Lanka",
+      address:
+        "120 A, Srimath Anagarika Dharmapala Mawatha, Colombo 07, Sri Lanka",
       phone: "+94 76 4700868",
       email: "sun.pfsl@gmail.com",
     },
@@ -417,11 +422,11 @@ export const weeks = [
             content: "Prepared SUN MAP and Trend analysis as home work",
           },
           {
-            type : "file",
+            type: "file",
             label: "SUN MAP",
             url: "/assets/files/sun-map.png",
             icon: "picture",
-          }
+          },
         ],
       },
       {
@@ -446,11 +451,11 @@ export const weeks = [
               "Create improved version of projects which SUNPF already done – Behaviour change communication program in Colombo Urban Council",
           },
           {
-            type : "file",
+            type: "file",
             label: "Projects Concluded by SUNPF",
             url: "/assets/files/projects-sunpf.png",
             icon: "picture",
-          }
+          },
         ],
       },
     ],
@@ -464,7 +469,6 @@ export const weeks = [
     days: [
       {
         date: "2026.04.27",
-        images: [w2img1, w2img2],
         entries: [
           {
             type: "text",
@@ -483,7 +487,6 @@ export const weeks = [
             icon: "form",
           },
         ],
-       
       },
       {
         date: "2026.04.28",
@@ -513,7 +516,6 @@ export const weeks = [
             icon: "docx",
           },
         ],
-        images: [w2img1, w2img2],
       },
       {
         date: "2026.04.29",
@@ -628,7 +630,8 @@ export const weeks = [
     id: 4,
     title: "Week 4",
     dateRange: "11 May – 15 May 2026",
-    summary: "Literature review and dry ration distribution in Badulla District.",
+    summary:
+      "Literature review and dry ration distribution in Badulla District.",
     highlights: ["Literature Review", "Dry Ration Distribution"],
     images: [],
     days: [
@@ -712,7 +715,8 @@ export const weeks = [
         entries: [
           {
             type: "text",
-            content: "Participated dry ration distribution in Passara Uri Estate",
+            content:
+              "Participated dry ration distribution in Passara Uri Estate",
           },
         ],
         images: [
@@ -833,8 +837,13 @@ export const weeks = [
     id: 7,
     title: "Week 7",
     dateRange: "01 Jun – 05 Jun 2026",
-    summary: "Action planning, dry ration distribution and education materials.",
-    highlights: ["Action Plan", "Dry Ration Distribution", "Education Materials"],
+    summary:
+      "Action planning, dry ration distribution and education materials.",
+    highlights: [
+      "Action Plan",
+      "Dry Ration Distribution",
+      "Education Materials",
+    ],
     images: [],
     days: [
       {
@@ -1080,27 +1089,33 @@ The most valuable lesson was about the gap between a nutrition problem on paper 
     links: [
       {
         unit: "Nutrition Assessment",
-        applied: "Collecting data at the Badulla SAM clinic and the Meegahakiula and Passara outreach clinics, and compiling figures on pregnant mothers, lactating mothers, and under-five children in the Ella MOH area.",
+        applied:
+          "Collecting data at the Badulla SAM clinic and the Meegahakiula and Passara outreach clinics, and compiling figures on pregnant mothers, lactating mothers, and under-five children in the Ella MOH area.",
       },
       {
         unit: "Public Health and Nutrition",
-        applied: "Working within the Multi-Sectoral Action Plan on Nutrition framework, coordinating with MOH areas and Divisional Secretariats, and supporting district-level dry ration distribution.",
+        applied:
+          "Working within the Multi-Sectoral Action Plan on Nutrition framework, coordinating with MOH areas and Divisional Secretariats, and supporting district-level dry ration distribution.",
       },
       {
         unit: "Communication and Health Promotion",
-        applied: "Practising Training of Trainers methodology, conducting community awareness sessions on FBDGs and the food plate model, and designing education materials and posters.",
+        applied:
+          "Practising Training of Trainers methodology, conducting community awareness sessions on FBDGs and the food plate model, and designing education materials and posters.",
       },
       {
         unit: "Sociology of Food and Nutrition",
-        applied: "Working across estate communities, Tamil-medium schools, and safety centres, where food choices are shaped by income, geography, and access long before they are shaped by knowledge.",
+        applied:
+          "Working across estate communities, Tamil-medium schools, and safety centres, where food choices are shaped by income, geography, and access long before they are shaped by knowledge.",
       },
       {
         unit: "Diet and Diseases",
-        applied: "Understanding severe acute malnutrition in clinical practice and contributing to meal enrichment programmes designed around real dietary gaps.",
+        applied:
+          "Understanding severe acute malnutrition in clinical practice and contributing to meal enrichment programmes designed around real dietary gaps.",
       },
       {
         unit: "Field Assignment in Nutrition",
-        applied: "Designing and piloting a KAP/KAB questionnaire, building pre- and post-evaluation forms, and conducting a literature review on the Badulla District nutrition situation.",
+        applied:
+          "Designing and piloting a KAP/KAB questionnaire, building pre- and post-evaluation forms, and conducting a literature review on the Badulla District nutrition situation.",
       },
     ],
     closing: `The reverse was also true: the field sent me back to my notes. After the first SAM clinic I re-read my Nutrition Assessment material with completely different attention, because I finally knew what the numbers were for.`,
