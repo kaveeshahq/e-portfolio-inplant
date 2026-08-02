@@ -113,11 +113,14 @@ I have two sisters. My elder sister works at the Teaching Hospital, Kalutara, wh
     university: {
       title: "What I Did During University",
       items: [
-        "Successfully completed a Bachelor's degree.",
-        "Participated in academic research projects.",
-        "Conducted presentations, seminars, and group discussions.",
-        "Worked collaboratively on group assignments and research projects.",
-        "Developed report writing and documentation skills.",
+        "Served as a Committee Member of the Nutrition Society, Wayamba University of Sri Lanka, contributing to student-led academic and community initiatives.",
+    "Served as a Director Board Member of the LEO Club of Royal Achievers, organizing leadership, volunteer, and community service projects.",
+    "Represented the university as a Member of the University Board of YAN Sri Lanka, collaborating on youth development and networking initiatives.",
+    "Actively participated in university events,engagement programs.",
+    "Contributed to organizing university events by supporting planning, coordination, and event execution.",
+    "Participated in inter-university sports competitions, strengthening teamwork, discipline, and sportsmanship.",
+    "Collaborated with student clubs and societies to organize and support academic, social, and community outreach activities.",
+    "Built strong leadership, communication, teamwork, and organizational skills through active involvement in university life.",
         "Improved leadership and communication through extracurricular activities.",
         "Participated in community engagement and volunteer activities.",
         "Strengthened analytical and problem-solving skills through coursework and practical projects.",
@@ -394,6 +397,15 @@ export const weeks = [
     id: 1,
     title: "Week 1",
     dateRange: "21st Apr – 24th Apr 2026",
+    narrative: `My in-plant training began on 21st April 2026 at the SUN PF head office in Colombo. The first day was given over entirely to understanding the organization itself — its history, the projects it has delivered, its internal hierarchy, its focal points, SUN 4.0, and the wider SUN Civil Society Network that sits behind all of it. What struck me most was learning that SUN PF is not a standalone NGO but the Civil Society Alliance of a global movement, which meant that everything I would go on to do in Badulla connected upward to a national plan and outward to an international one.
+
+The second day tested how much of that had actually stayed with me. We sat a quiz on the SUN movement, and I was introduced to my Terms of Reference — the document setting out my scope, responsibilities, and deliverables for the ten weeks ahead. Having expectations written down that plainly was unfamiliar after four years of coursework, and it shifted my sense of the placement from something I was attending to something I was accountable for.
+
+The main assignment from that day was to prepare a SUN map and a trend analysis. The trend analysis became the most substantial piece of desk work I produced during the training: a comprehensive study of stunting among children under five years in Sri Lanka across 2010 to 2025. I collected, analysed, and interpreted data drawn from both national and international sources, and examined the patterns underneath the headline figures — gender disparities, district-level variation, and the impact of socioeconomic factors on child nutrition. I compiled the work into a detailed analytical report setting out evidence-based findings and recommendations intended to support nutrition-related decision making. Working across fifteen years of national data taught me how uneven progress can be beneath a national average that appears to be improving.
+
+The third day took me out of the office for a field visit to the Nutrition Division, where I sat in on an awareness session on the Food-Based Dietary Guidelines. I also practised Training of Trainers methodology by running a community awareness session on fruit and vegetable consumption. It was my first experience of delivering rather than observing, and it made the gap between knowing the content and communicating it immediately obvious.
+
+The week closed with an introduction to the Multi-Sectoral Action Plan on Nutrition and an exercise I enjoyed more than I expected: taking a behaviour change communication programme SUN PF had already run in the Colombo Urban Council and designing an improved version of it. Being asked in my first week to critique completed professional work, rather than simply learn from it, set the tone for everything that followed.`,
     summary: "Orientation and introduction to the organization.",
     highlights: ["Orientation", "Team Introduction", "Site Visit"],
     images: [],
@@ -410,6 +422,24 @@ export const weeks = [
             content:
               "Introduce about the SUNPF (History, Projects, Hierarchy, Focal point, SUN 4.0, SUN Civil society network)",
           },
+          {
+            // TODO: drop the real file into public/assets/files/ and update `url` + `label`.
+            type: "file",
+            label: "SUN PF Orientation Presentation",
+            description:
+              "The slide deck the SUN PF team used on day one to introduce the organization — its history, projects, hierarchy, focal points, SUN 4.0, and the SUN Civil Society Network.",
+            url: "/assets/files/Orientation to SUN PF Interns.pptx",
+            icon: "slides",
+          },
+           {
+            // TODO: drop the real file into public/assets/files/ and update `url` + `label`.
+            type: "file",
+            label: "Trend Analysis of Stunting among Children Under 5 Years in Sri Lanka",
+            description:
+              "The slide deck the SUN PF team used on day one to introduce the organization — its history, projects, hierarchy, focal points, SUN 4.0, and the SUN Civil Society Network.",
+            url: "/assets/files/Trend Analysis of Stunting among Children Under 5 Years in Sri Lanka.pdf",
+            icon: "pdf",
+          },
         ],
       },
       {
@@ -424,6 +454,8 @@ export const weeks = [
           {
             type: "file",
             label: "SUN MAP",
+            description:
+              "The SUN map I prepared as homework in week one, setting out the structure of the SUN movement and how its parts relate to one another in Sri Lanka.",
             url: "/assets/files/sun-map.png",
             icon: "picture",
           },
@@ -453,6 +485,8 @@ export const weeks = [
           {
             type: "file",
             label: "Projects Concluded by SUNPF",
+            description:
+              "A reference sheet of projects SUN PF has already delivered, used as the starting point for the exercise of designing an improved version of the Colombo Urban Council behaviour change communication programme.",
             url: "/assets/files/projects-sunpf.png",
             icon: "picture",
           },
@@ -464,6 +498,15 @@ export const weeks = [
     id: 2,
     title: "Week 2",
     dateRange: "27 Apr – 30 Apr 2026",
+    narrative: `The second week was where I first had to produce work that other people would depend on. I began by going through my Terms of Reference in detail with Mr. Bandula Seenadheera and Mrs. Achintha, clarifying what was expected of me and how my activities fitted into the division's wider plan. That conversation turned the document from a list of tasks into an actual working brief.
+
+I then planned a Training of Trainers session and drafted a KAP questionnaire for the pilot study — a tool designed to capture what a community knows, how it feels, and what it actually does about a given nutrition topic. Writing survey questions for real respondents proved far harder than answering them. Every item had to be unambiguous, culturally appropriate, and answerable by someone who had not spent four years studying nutrition, and several of my first attempts failed on at least one of those counts.
+
+The middle of the week went entirely into preparation. I assembled every document the session would need, from the presentation itself through to the supporting material, and worked out how the content should be sequenced so that it built rather than simply accumulated.
+
+On the day, I delivered the session in one hour and fifteen minutes. Standing in front of a room and holding its attention for that long was the most daunting thing I had done up to that point in my training, and getting to the end of it changed what I believed I was capable of taking on. The session materials are archived in the shared folder linked below.
+
+I closed the week by planning further sessions for the weeks ahead, completing the Excel sheet for the meal enrichment programme, and preparing the evaluation form that would let us measure whether our sessions were actually changing anything. Building the evaluation tool alongside the session itself taught me that an intervention without a way to assess it is really only an activity.`,
     summary: "Field visits and community assessment activities.",
     highlights: ["Field Visit", "Community Assessment"],
     days: [
@@ -482,7 +525,9 @@ export const weeks = [
           },
           {
             type: "link",
-            label: "KAP Questionnaire (Google Forms)",
+            label: "KAP Questionnaire",
+            description:
+              "The Knowledge, Attitudes and Practices questionnaire I designed for the pilot study — the tool used to capture what a community knows, how it feels, and what it actually does about a given nutrition topic.",
             url: "https://docs.google.com/forms/d/e/1FAIpQLSdBBKmKt6ygZqVp8iMHnWkr3M9O-xycMthwSf8Ka7J3UGv63g/viewform?usp=publish-editor",
             icon: "form",
           },
@@ -497,23 +542,31 @@ export const weeks = [
               "Prepared all the documents related to the next day session.",
           },
           {
+            // TODO: paste the real Google Slides share link into `url`.
             type: "link",
-            label: "Session Presentation (Google Slides)",
-            url: "https://your-slides-link-here",
-            icon: "slides",
+            label: "TOT Session Presentation",
+            description:
+              "The slides used in the 29th April Training of Trainers session.",
+            url: "/assets/files/week2-tot-session-presentation.pdf",
+            icon: "pdf",
           },
           {
+            // TODO: drop the real file into public/assets/files/ and update `url`.
             type: "file",
-            label: "Session Document.docx",
-            url: "/assets/files/week2-session-doc.docx",
-            icon: "docx",
+            label: "Participants List",
+            description:
+              "Participants list for the Training of Trainers session, including names and contact information.",
+            url: "/assets/files/participants.pdf",
+            icon: "pdf",
           },
-          { type: "text", content: "Used the following presentation as well." },
           {
+            // TODO: drop the real file into public/assets/files/ and update `url`.
             type: "file",
-            label: "Session Document.docx",
-            url: "/assets/files/week2-session-doc.docx",
-            icon: "docx",
+            label: "JKH Presentation Document",
+            description:
+              "Used the following presentation as well.",
+            url: "/assets/files/jkh.pdf",
+            icon: "pdf",
           },
         ],
       },
@@ -526,7 +579,9 @@ export const weeks = [
           },
           {
             type: "link",
-            label: "Session Folder (Google Drive)",
+            label: "Images of the Session",
+            description:
+              "The full set of materials and records from the Training of Trainers session I delivered on 29th April, archived on Google Drive.",
             url: "https://drive.google.com/drive/u/2/folders/1KXomwtb3oXwiMIvj3STzwghaKKE24oSw",
             icon: "drive",
           },
@@ -553,6 +608,13 @@ export const weeks = [
     id: 3,
     title: "Week 3",
     dateRange: "04 May – 08 May 2026",
+    narrative: `Week three opened at a desk rather than in the field, with a SUN online meeting held over Zoom. Listening to coordinators from different districts report on their work gave me a sense of how varied conditions are across the country, and how much of the alliance's function is simply keeping that dispersed effort aligned.
+
+I then built the pre- and post-evaluation forms for our awareness sessions. The purpose of a paired form is straightforward but easy to underestimate: without a baseline taken before the session, any improvement claimed afterwards is guesswork. Designing the two so that they mirrored each other, allowing responses to be compared item by item, was a more careful exercise than I had anticipated.
+
+The same day I moved on to data collection, compiling figures on the number of pregnant mothers, lactating mothers, and children under five in the Ella MOH area. These are the groups a nutrition programme is built around, and seeing the district's burden expressed as counts of identifiable households rather than percentages made the scale of it concrete in a way the literature never had.
+
+Midweek I joined the dry ration distribution programme in the Soranathota area — my first distribution, and my first sight of how much coordination sits behind an activity that looks simple from the outside. Photographs from the event are in the folder linked below. I then took leave for the final two days of the week to return to the university.`,
     summary: "Nutrition screening programs.",
     highlights: ["Nutrition Screening", "Data Collection"],
     images: [],
@@ -575,16 +637,22 @@ export const weeks = [
             content: "Created pre and post evaluation form",
           },
           {
+            // TODO: labels inferred from where these sat in the day's log —
+            // confirm, then drop the real files into public/assets/files/.
             type: "file",
-            label: "Session Document.docx",
-            url: "/assets/files/week2-session-doc.docx",
-            icon: "docx",
+            label: "Pre-Evaluation Form",
+            description:
+              "The form completed by participants before an awareness session, establishing the baseline against which any change is measured.",
+            url: "/assets/files/pre.pdf",
+            icon: "pdf",
           },
           {
             type: "file",
-            label: "Session Document.docx",
-            url: "/assets/files/week2-session-doc.docx",
-            icon: "docx",
+            label: "Post-Evaluation Form",
+            description:
+              "The matching form completed after the session, written to mirror the pre-evaluation form item by item so responses can be compared directly.",
+            url: "/assets/files/post.pdf",
+            icon: "pdf",
           },
           {
             type: "text",
@@ -593,9 +661,11 @@ export const weeks = [
           },
           {
             type: "file",
-            label: "Session Document.docx",
-            url: "/assets/files/week2-session-doc.docx",
-            icon: "docx",
+            label: "Ella MOH Area Population Data",
+            description:
+              "Compiled figures on the number of pregnant mothers, lactating mothers, and children under five in the Ella MOH area — the groups a nutrition programme is built around.",
+            url: "/assets/files/ella moh.pdf",
+            icon: "pdf",
           },
         ],
       },
@@ -609,7 +679,9 @@ export const weeks = [
           },
           {
             type: "link",
-            label: "Photos from the event (Google Drive)",
+            label: "Photos from the Soranathota distribution",
+            description:
+              "Photographs from the dry ration distribution programme in the Soranathota area — my first distribution — archived on Google Drive.",
             url: "https://drive.google.com/drive/u/0/folders/1Yw46jBqweC26UvZT_EOeeldlD8gyFy_T",
             icon: "drive",
           },
@@ -630,6 +702,15 @@ export const weeks = [
     id: 4,
     title: "Week 4",
     dateRange: "11 May – 15 May 2026",
+    narrative: `The first two days of this week went entirely into a literature review of the current nutrition situation in Badulla District. I worked through national survey data, district reports, and published studies, looking for the picture they formed together rather than reading each in isolation. It was slow, unglamorous work, but it gave me the background I needed to understand why the district's interventions are designed the way they are — and why Badulla, with its estate sector and its geography, does not respond to the same approaches that work elsewhere in the country.
+
+Producing the written summary of key findings was a useful discipline in its own right. Condensing a large body of material down to the findings that actually mattered for decision making forced me to separate what was interesting from what was relevant, which are not the same thing.
+
+Midweek I met Mr. B.P. Dayawansha, Planning Director of the Badulla District Secretariat. It was my first meeting with a senior government official, and it reframed how I understood the work. Nutrition outcomes at district level depend on planning, budgets, and coordination between sectors that carry no nutrition mandate at all, and a great deal of what determines whether a programme succeeds is settled in rooms like that one rather than in the field.
+
+The last two days took me into the field, joining dry ration distribution and meal enrichment at the Kanawarella dithwa safety centre. Meal enrichment works by improving the nutritional quality of what families are already receiving and eating rather than replacing it, which makes it considerably more likely to be sustained once the programme moves on.
+
+The following day I joined the same activity at the Lunugala Vigneshwara Tamil School dithwa safety centre. Working with families whose language and circumstances differed from my own required me to listen a great deal more than I spoke, and it was the clearest early lesson that community nutrition is a communication discipline as much as a technical one.`,
     summary:
       "Literature review and dry ration distribution in Badulla District.",
     highlights: ["Literature Review", "Dry Ration Distribution"],
@@ -679,6 +760,9 @@ export const weeks = [
               "Participated dry ration distribution and meal enrichment in Kanawarella dithwa safety center",
           },
         ],
+        imagesTitle: "Dry ration distribution — Kanawarella dithwa safety centre",
+        imagesDescription:
+          "Distributing dry rations alongside the meal enrichment programme at the Kanawarella safety centre, my first field activity of the week after two days of desk-based literature review.",
         images: [w4img1, w4img2, w4img3],
       },
       {
@@ -697,6 +781,15 @@ export const weeks = [
     id: 5,
     title: "Week 5",
     dateRange: "18 May – 22 May 2026",
+    narrative: `I opened the week by modifying the KAB questionnaire, revising items that had not performed as intended once they met real respondents. Some questions had been read differently from how I had written them, and others produced answers too vague to analyse. Redrafting a tool after watching it fail in practice was more instructive than designing it had been in the first place.
+
+The middle of the week was spent almost entirely in the field. I joined dry ration distribution at the Passara Uri Estate, and the following day distribution combined with a meal enrichment programme at the Alubogolla dithwa safety centre. Estate communities contend with a particular combination of low household income, distance from services, and limited access to diverse food, and seeing that arrangement first-hand reframed much of what I had read during the previous week's literature review.
+
+The final two days introduced me to clinical nutrition assessment. I joined the Badulla SAM clinic to collect data on children being screened and treated for severe acute malnutrition — the most serious form of undernutrition, and the one carrying the highest immediate risk to a child's life.
+
+The next day I travelled to the Meegahakiula outreach clinic for the same purpose. Outreach clinics exist because distance is itself a barrier to treatment: families who cannot reach a district facility would otherwise go unseen entirely, and the children most at risk are frequently the hardest to reach.
+
+Meeting children whose measurements I had previously encountered only as cut-off values in a textbook was the most affecting part of my placement. A child classified as severely acutely malnourished in a lecture is a threshold on a growth chart. In a clinic, that same child arrives with a family, a household income, and a distance travelled — and it became clear to me how little of that context a guideline can hold on its own.`,
     summary: "Dry ration distribution and SAM clinic data collection.",
     highlights: ["Dry Ration Distribution", "SAM Clinic", "Data Collection"],
     images: [],
@@ -719,6 +812,9 @@ export const weeks = [
               "Participated dry ration distribution in Passara Uri Estate",
           },
         ],
+        imagesTitle: "Dry ration distribution — Passara Uri Estate",
+        imagesDescription:
+          "Distribution at the Passara Uri Estate, an estate-sector community where low household income, distance from services, and limited access to diverse food combine to shape nutrition outcomes.",
         images: [
           w5img1,
           w5img2,
@@ -739,6 +835,9 @@ export const weeks = [
               "Participated dry ration distribution and meal enrichment program in Alubogolla dithwa safety center",
           },
         ],
+        imagesTitle: "Dry ration distribution and meal enrichment — Alubogolla dithwa safety centre",
+        imagesDescription:
+          "Dry ration distribution combined with the meal enrichment programme at Alubogolla, which improves the nutritional quality of food families already receive rather than replacing it.",
         images: [w5img9, w5img10, w5img11, w5img12],
       },
       {
@@ -749,6 +848,9 @@ export const weeks = [
             content: "Participated Badulla SAM clinic for the data collection",
           },
         ],
+        imagesTitle: "Badulla SAM clinic — data collection",
+        imagesDescription:
+          "Collecting data at the Badulla SAM clinic, where children are screened and treated for severe acute malnutrition. This was my first exposure to clinical nutrition assessment.",
         images: [w5img13, w5img14, w5img15, w5img16, w5img17],
       },
       {
@@ -767,6 +869,13 @@ export const weeks = [
     id: 6,
     title: "Week 6",
     dateRange: "25 May – 30 May 2026",
+    narrative: `This week continued the rhythm of distribution and clinic work that defined the middle stretch of my placement, and the repetition turned out to matter. Seeing the same activity run at different sites, with different coordinators and different communities, showed me which parts of the process are fixed and which have to be adapted locally.
+
+I began with dry ration distribution at the Passara AG office and the Memale dithwa safety centre. Later in the week I joined distribution in the Kandegedara PHM area within the Soranathota MOH division, working alongside the public health midwife whose knowledge of the individual families in her area is the reason these programmes reach the people they are meant to reach.
+
+Between field days I returned to the Badulla SAM clinic for further data collection, and prepared an Excel sheet compiling the details of coordinators across the Badulla safety centres. That record is about as unglamorous as work gets, but it is precisely what makes the next distribution possible — knowing who to contact at each centre is the difference between a programme that runs and one that stalls. Building it taught me how much of this work depends on information being organised before anyone needs it.
+
+Thursday was a holiday, and the week closed at the Passara outreach SAM clinic, collecting data alongside the field staff.`,
     summary: "Dry ration distribution and SAM clinic data collection.",
     highlights: ["Dry Ration Distribution", "SAM Clinic", "Data Collection"],
     images: [],
@@ -780,6 +889,9 @@ export const weeks = [
               "Participated dry ration distribution in Passara AG office and Memale dithwa safety center",
           },
         ],
+        imagesTitle: "Dry ration distribution — Passara AG office and Memale dithwa safety centre",
+        imagesDescription:
+          "Two distribution points in a single day: the Passara AG office and the Memale safety centre, showing how the same programme adapts to different sites and coordinators.",
         images: [w6img1, w6img2, w6img3, w6img4, w6img5, w6img6, w6img7],
       },
       {
@@ -805,6 +917,9 @@ export const weeks = [
               "Participated dry ration distribution in Kandegedara PHM area in Soranathota MOH",
           },
         ],
+        imagesTitle: "Dry ration distribution — Kandegedara PHM area, Soranathota MOH",
+        imagesDescription:
+          "Distribution in the Kandegedara PHM area, working alongside the public health midwife whose knowledge of individual families is what allows the programme to reach the households that need it most.",
         images: [
           w6img11,
           w6img22,
@@ -837,6 +952,15 @@ export const weeks = [
     id: 7,
     title: "Week 7",
     dateRange: "01 Jun – 05 Jun 2026",
+    narrative: `Week seven opened with planning rather than fieldwork. I created an action plan for the ongoing projects running under the CSO, setting out activities, responsibilities, and timelines across the programme. Having spent the previous weeks joining individual field days, laying them out as a single sequence finally showed me how they connect — which activities depend on others, where the pressure points fall, and why the calendar is arranged the way it is.
+
+I was back in the field the following day for dry ration distribution at the Kanawarella and Lunugala Vigneshwara Tamil School dithwa safety centres, returning to two sites I had first visited in week four. Coming back to the same communities made a noticeable difference; being a familiar face rather than a visitor changed how people spoke to me.
+
+Midweek I created education materials for the upcoming community awareness sessions. Designing material for a mixed audience — varying literacy, varying prior knowledge, limited time to hold attention — is a real constraint, and it pushed me toward visual explanation and away from the text-heavy style that university work had trained into me.
+
+I then joined dry ration distribution at Passara MOH and in the Soranathota Budugekanda area.
+
+The week ended with finalising the KAB questionnaire data. Turning a pile of completed forms into findings that someone could actually act on was my first complete pass through the full cycle — designing a tool, revising it after it met real respondents, taking it back to the field, and reporting what it produced. Seeing that loop close was one of the more satisfying moments of the placement.`,
     summary:
       "Action planning, dry ration distribution and education materials.",
     highlights: [
@@ -864,6 +988,9 @@ export const weeks = [
               "Participated dry ration distribution in Kanawarella and Lunugala Vigneshwara Tamil school dithwa safety centers",
           },
         ],
+        imagesTitle: "Dry ration distribution — Kanawarella and Lunugala Vigneshwara Tamil School",
+        imagesDescription:
+          "Returning to two safety centres I had first visited in week four. Being a familiar face rather than a first-time visitor noticeably changed how people engaged with me.",
         images: [w7img1, w7img2],
       },
       {
@@ -885,6 +1012,9 @@ export const weeks = [
               "Participated dry ration distribution Passara MOH and Soranathota Budugekanda area",
           },
         ],
+        imagesTitle: "Dry ration distribution — Passara MOH and Soranathota Budugekanda",
+        imagesDescription:
+          "Distribution across the Passara MOH division and the Budugekanda area of Soranathota.",
         images: [w7img3, w7img4, w7img5, w7img6, w7img7],
       },
       {
@@ -902,6 +1032,15 @@ export const weeks = [
     id: 8,
     title: "Week 8",
     dateRange: "08 Jun – 12 Jun 2026",
+    narrative: `This week was built around my final project on the food plate model. I spent the first two days preparing the project and its accompanying presentation, then finalising the content. The food plate model communicates balanced eating visually — showing proportions on a plate rather than describing grams or servings — which makes it far more usable for audiences who will never read a dietary guideline.
+
+I then produced the education materials to support the session, applying what I had learned the previous week about designing for a mixed audience.
+
+The centrepiece of the week was a community awareness session in Thaldena, where I presented the food plate model alongside the Food-Based Dietary Guidelines. This was the point at which the training stopped feeling like observation. I was delivering my own project, built from my own research, to a community — and answering their questions about it myself rather than deferring to a supervisor.
+
+Comparing that session with my first nervous attempt in week one made the change in my own confidence hard to miss. The nerves had not disappeared, but they no longer decided what I was willing to attempt.
+
+I closed the week at the Passara DS office and MOH, discussing the Multi-Sectoral Action Plan on Nutrition and how it is being carried through at divisional level. Returning to MSAPN near the end of the placement, having now seen the field activities it produces, made far more sense of it than the introduction I had received in week one.`,
     summary: "Food plate model project and community awareness session.",
     highlights: ["Food Plate Model", "Community Awareness", "FBDGs"],
     images: [],
@@ -938,6 +1077,9 @@ export const weeks = [
               "Conducted a community awareness session related to food plate model and FBDGs in Thaldena",
           },
         ],
+        imagesTitle: "Community awareness session — food plate model and FBDGs, Thaldena",
+        imagesDescription:
+          "My final project delivered to the community at Thaldena, presenting the food plate model alongside the Food-Based Dietary Guidelines. This was the first session built entirely from my own research and materials.",
         images: [
           w8img1,
           w8img2,
@@ -973,6 +1115,13 @@ export const weeks = [
     id: 9,
     title: "Week 9",
     dateRange: "15 Jun – 19 Jun 2026",
+    narrative: `I began the week at the Passara Divisional Secretariat office, meeting Divisional Secretary Mrs. W.T. Gangani Somaweera and collecting the 2025 Action Plan. Reading a completed, implemented plan so soon after drafting one myself in week seven was genuinely instructive — the level of specificity it carried, and the number of stakeholders it had to account for, went well beyond what my own draft had anticipated.
+
+The following day I conducted a community awareness session for the parents of pre-school children. Speaking to parents about their own children's nutrition demanded a different register from the sessions I had delivered before. It called for less presentation and more conversation, and I found that questions worked considerably better than statements — parents engaged far more readily with a practical difficulty they had raised themselves than with advice they had not asked for.
+
+The remainder of the week went into my final project, including designing the posters to accompany it. Translating my findings into a poster meant reducing them to what could be understood at a glance, which proved a harder editorial problem than writing the full report had been.
+
+Working on the project across several uninterrupted days also gave me the chance to step back and see the placement as a whole for the first time, rather than as a sequence of individual field days.`,
     summary: "Community awareness session and final project work.",
     highlights: ["Community Awareness", "Final Project", "Posters"],
     images: [],
@@ -997,6 +1146,9 @@ export const weeks = [
               "Conducted a community awareness session to pre-school children’s parents",
           },
         ],
+        imagesTitle: "Community awareness session — parents of pre-school children",
+        imagesDescription:
+          "An awareness session for the parents of pre-school children, which called for a more conversational approach than the sessions I had delivered to general community groups.",
         images: [
           w9img1,
           w9img2,
@@ -1032,6 +1184,11 @@ export const weeks = [
     id: 10,
     title: "Week 10",
     dateRange: "22 Jun – 26 Jun 2026",
+    narrative: `My final week was spent largely in the office, helping to finalise the report for the dry ration distribution programme. Consolidating weeks of field activity across many sites into a single documented account was a fitting way to close the placement. It also made me appreciate something I had underestimated at the start: a programme's value depends heavily on being recorded properly, because the report is what carries the work forward to funders, to government partners, and to whoever runs the next round.
+
+The week also brought a meeting with SUN PF head office members — the same team who had introduced me to the organization ten weeks earlier, though I arrived at this one with a considerably better understanding of what they actually do.
+
+I closed with a final FBDGs community awareness session for the Alubogolla dithwa safety centre, ending my training at one of the same safety centres where I had first joined a distribution back in May. Delivering a session at a site I had first visited as an observer was a fitting way to finish, and a clear measure of how far the ten weeks had taken me.`,
     summary: "Report finalization and FBDGs community awareness session.",
     highlights: ["Report Finalization", "FBDGs", "Community Awareness"],
     images: [],

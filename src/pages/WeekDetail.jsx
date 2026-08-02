@@ -17,20 +17,56 @@ const iconMap = {
   picture: { icon: PictureInPicture, color: "text-green-600 bg-green-100 border-green-200", label: "Image" },
 }
 
-function AttachmentLink({ entry }) {
+/*
+ * An attachment with room to explain itself. `description` says what the file
+ * is, so a reader knows what they are opening before they click it.
+ */
+function AttachmentCard({ entry }) {
   const meta = iconMap[entry.icon] || iconMap.link
   const Icon = meta.icon
+
   return (
-    <a
-      href={entry.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl border text-sm font-medium transition-all hover:shadow-sm hover:-translate-y-0.5 ${meta.color}`}
-    >
-      <Icon size={15} />
-      {entry.label}
-      <ExternalLink size={11} className="opacity-50" />
-    </a>
+    <div className="flex items-start gap-4 bg-cream/40 border border-indigo/10 rounded-[18px] p-4 transition-all duration-300 hover:border-indigo/30 hover:shadow-sm">
+      <div className={`w-10 h-10 rounded-xl border flex items-center justify-center flex-shrink-0 ${meta.color}`}>
+        <Icon size={17} />
+      </div>
+
+      <div className="min-w-0 flex-1">
+        <div className="flex items-center gap-2 mb-1 flex-wrap">
+          <h3 className="text-sm font-semibold text-navy">{entry.label}</h3>
+          <span className="text-[10px] uppercase tracking-widest text-steel/60 border border-indigo/15 rounded-full px-2 py-0.5">
+            {meta.label}
+          </span>
+        </div>
+
+        {entry.description && (
+          <p className="text-sm text-steel leading-relaxed mb-3">{entry.description}</p>
+        )}
+
+        <a
+          href={entry.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 text-xs font-medium text-indigo hover:text-navy transition-colors group"
+        >
+          {entry.type === "file" ? "Open file" : "Open link"}
+          <ExternalLink size={11} className="transition-transform group-hover:translate-x-0.5" />
+        </a>
+      </div>
+    </div>
+  )
+}
+
+/* A titled, described set of photos — one album per activity, not per photo. */
+function Album({ title, description, images, first }) {
+  return (
+    <div className={first ? "" : "pt-7 mt-7 border-t border-indigo/10"}>
+      {title && <h3 className="text-sm font-semibold text-navy mb-1">{title}</h3>}
+      {description && (
+        <p className="text-sm text-steel leading-relaxed mb-4">{description}</p>
+      )}
+      <ImageGallery images={images} />
+    </div>
   )
 }
 
@@ -136,12 +172,30 @@ export default function WeekDetail() {
   const next = weeks.find((w) => w.id === week.id + 1)
 
   /* Flatten the week's days into one week-level view. */
+  const narrative = week.narrative
   const days = week.days || []
   const allEntries = days.flatMap((d) => d.entries || [])
   const activities = allEntries.filter((e) => e.type === "text")
   const attachments = allEntries.filter((e) => e.type === "link" || e.type === "file")
-  /* Same photo can be listed on more than one day — keep the first occurrence only. */
-  const photos = [...new Set([...(week.images || []), ...days.flatMap((d) => d.images || [])])]
+
+  /*
+   * Each day that carries photos becomes one described album, so a set of
+   * images is introduced by what it actually shows rather than dumped as an
+   * unlabelled grid. Week-level `images` still render as a single untitled
+   * album, deduped since the same photo can be listed on more than one day.
+   */
+  const dayAlbums = days
+    .filter((d) => (d.images || []).length > 0)
+    .map((d) => ({
+      title: d.imagesTitle,
+      description: d.imagesDescription,
+      images: d.images,
+    }))
+  const weekLevel = week.images || []
+  const albums = weekLevel.length
+    ? [{ images: [...new Set(weekLevel)] }, ...dayAlbums]
+    : dayAlbums
+  const photoCount = albums.reduce((sum, a) => sum + a.images.length, 0)
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-14">
@@ -168,32 +222,51 @@ export default function WeekDetail() {
 
       {days.length > 0 ? (
         <>
-          {activities.length > 0 && (
+          {narrative ? (
             <Section icon={ListChecks} title="What I did this week">
-              <ul className="space-y-3">
-                {activities.map((entry, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm text-navy/80 leading-relaxed">
-                    <span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-indigo flex-shrink-0" />
-                    {entry.content}
-                  </li>
-                ))}
-              </ul>
+              {narrative.split(/\n\s*\n/).map((para, i) => (
+                <p key={i} className="text-navy/80 leading-relaxed mb-4 last:mb-0">
+                  {para.trim()}
+                </p>
+              ))}
             </Section>
+          ) : (
+            /* Weeks without a written narrative fall back to their logged points. */
+            activities.length > 0 && (
+              <Section icon={ListChecks} title="What I did this week">
+                <ul className="space-y-3">
+                  {activities.map((entry, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm text-navy/80 leading-relaxed">
+                      <span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-indigo flex-shrink-0" />
+                      {entry.content}
+                    </li>
+                  ))}
+                </ul>
+              </Section>
+            )
           )}
 
           {attachments.length > 0 && (
             <Section icon={Paperclip} title="Attachments & resources" count={attachments.length}>
-              <div className="flex flex-wrap gap-2.5">
+              <div className="space-y-3">
                 {attachments.map((entry, i) => (
-                  <AttachmentLink key={i} entry={entry} />
+                  <AttachmentCard key={i} entry={entry} />
                 ))}
               </div>
             </Section>
           )}
 
-          {photos.length > 0 && (
-            <Section icon={Images} title="Photos" count={photos.length}>
-              <ImageGallery images={photos} />
+          {photoCount > 0 && (
+            <Section icon={Images} title="Photos" count={photoCount}>
+              {albums.map((album, i) => (
+                <Album
+                  key={i}
+                  first={i === 0}
+                  title={album.title}
+                  description={album.description}
+                  images={album.images}
+                />
+              ))}
             </Section>
           )}
         </>
