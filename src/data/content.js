@@ -436,7 +436,7 @@ The week closed with an introduction to the Multi-Sectoral Action Plan on Nutrit
             type: "file",
             label: "Trend Analysis of Stunting among Children Under 5 Years in Sri Lanka",
             description:
-              "The slide deck the SUN PF team used on day one to introduce the organization: its history, projects, hierarchy, focal points, SUN 4.0, and the SUN Civil Society Network.",
+              "An analysis of the trend of stunting among children under 5 years in Sri Lanka.",
             url: "/assets/files/Trend Analysis of Stunting among Children Under 5 Years in Sri Lanka.pdf",
             icon: "pdf",
           },
@@ -548,6 +548,15 @@ I closed the week by planning further sessions for the weeks ahead, completing t
             description:
               "The slides used in the 29th April Training of Trainers session.",
             url: "/assets/files/week2-tot-session-presentation.pdf",
+            icon: "pdf",
+          },
+                {
+            // TODO: paste the real Google Slides share link into `url`.
+            type: "link",
+            label: "Food Plate Model Presentation",
+            description:
+              "The slides used in the 29th April Training of Trainers session.",
+            url: "/assets/files/Food plate model.pdf",
             icon: "pdf",
           },
           {
@@ -1076,6 +1085,14 @@ I closed the week at the Passara DS office and MOH, discussing the Multi-Sectora
             content:
               "Conducted a community awareness session related to food plate model and FBDGs in Thaldena",
           },
+          {
+            type: "file",
+            label: "Participants List – Thaldena",
+            description:
+              "Attendance record for the Thaldena awareness session, listing the 25 community members who took part.",
+            url: "/assets/files/session2.png",
+            icon: "picture",
+          },
         ],
         imagesTitle: "Community awareness session on the food plate model and FBDGs, Thaldena",
         imagesDescription:
@@ -1145,6 +1162,15 @@ Working on the project across several uninterrupted days also gave me the chance
             content:
               "Conducted a community awareness session to pre-school children’s parents",
           },
+          {
+            // TODO: drop the real file into public/assets/files/ and update `url`.
+            type: "file",
+            label: "Participants List – Atabagahakubura",
+            description:
+              "Attendance record for the Atabagahakubura session held for the parents of pre-school children.",
+            url: "/assets/files/session3.png",
+            icon: "picture",
+          },
         ],
         imagesTitle: "Community awareness session for parents of pre-school children",
         imagesDescription:
@@ -1210,6 +1236,15 @@ I closed with a final FBDGs community awareness session for the Alubogolla dithw
             type: "text",
             content:
               "Meeting with SUNPF head office members and FBDGs community awareness session for Alubogolla Dithwa safety center",
+          },
+          {
+            // TODO: drop the real file into public/assets/files/ and update `url`.
+            type: "file",
+            label: "Participants List – Alubogolla",
+            description:
+              "Attendance record for the FBDGs awareness session at the Alubogolla dithwa safety centre.",
+            url: "/assets/files/session4.png",
+            icon: "picture",
           },
         ],
       },
