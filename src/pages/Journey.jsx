@@ -109,7 +109,7 @@ export default function Journey() {
 
 /*
  * Pops in when its row reaches the viewport, so dots light up down the rail.
- * Positioning lives on the outer div — Reveal animates translate-x itself and
+ * Positioning lives on the outer div, because Reveal animates translate-x itself and
  * would fight a translate class applied to the same element.
  */
 function TimelineDot() {

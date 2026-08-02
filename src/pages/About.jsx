@@ -46,7 +46,7 @@ const panels = [
     num: "02",
     icon: Building2,
     title: "Organization",
-    desc: "Scaling Up Nutrition People's Forum Sri Lanka — global roots, mission, network, and where to find them.",
+    desc: "Scaling Up Nutrition People's Forum Sri Lanka: global roots, mission, network, and where to find them.",
     gradient: "from-[#4B5694] to-[#6370b0]",
   },
   {
@@ -54,7 +54,7 @@ const panels = [
     num: "03",
     icon: BookOpen,
     title: "The course",
-    desc: "The in-plant training module — objectives, academic context, and expected outcomes.",
+    desc: "The in-plant training module: objectives, academic context, and expected outcomes.",
     gradient: "from-[#7288AE] to-[#8fa5c5]",
   },
 ]
@@ -178,7 +178,7 @@ export default function About() {
           The story behind<br />10 weeks of growth
         </h1>
         <p className="text-steel text-base leading-relaxed max-w-lg mx-auto animate-rise [animation-delay:200ms]">
-          An immersive journey through community nutrition, field research, and personal discovery — with the Scaling Up Nutrition People's Forum Sri Lanka.
+          An immersive journey through community nutrition, field research, and personal discovery, with the Scaling Up Nutrition People's Forum Sri Lanka.
         </p>
       </div>
 

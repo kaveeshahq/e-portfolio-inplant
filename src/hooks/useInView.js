@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 const BOTTOM_MARGIN = 70
 
 /**
- * True when we should skip the reveal animation entirely — the reader asked for
+ * True when we should skip the reveal animation entirely: the reader asked for
  * reduced motion, or there is no DOM to measure. Either way content must start
  * visible, otherwise it would stay stuck at opacity 0.
  */
@@ -20,9 +20,9 @@ function shouldSkipAnimation() {
  * One rAF-throttled scroll listener drives every Reveal on the page.
  *
  * This deliberately measures positions instead of using IntersectionObserver.
- * IO only fires when an element *crosses* a threshold, so an instant jump — an
+ * IO only fires when an element *crosses* a threshold, so an instant jump (an
  * anchor link, a restored scroll position, or a panel expanding above the
- * current offset — can carry an element from below the fold to above it without
+ * current offset) can carry an element from below the fold to above it without
  * ever being observed as visible. That leaves it stranded at opacity 0 forever.
  * A position sweep cannot miss, because it re-checks the truth every frame.
  */
@@ -56,7 +56,7 @@ function sweep() {
 
 /*
  * Coalesce bursts of scroll events into a single sweep. rAF keeps it aligned
- * with painting, but rAF never fires while a tab is hidden — so a timer races
+ * with painting, but rAF never fires while a tab is hidden, so a timer races
  * it, and whichever wins cancels the other. Without the timer, anything
  * revealed while the tab is in the background stays stuck at opacity 0.
  */

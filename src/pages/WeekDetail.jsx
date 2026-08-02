@@ -57,7 +57,7 @@ function AttachmentCard({ entry }) {
   )
 }
 
-/* A titled, described set of photos — one album per activity, not per photo. */
+/* A titled, described set of photos: one album per activity, not per photo. */
 function Album({ title, description, images, first }) {
   return (
     <div className={first ? "" : "pt-7 mt-7 border-t border-indigo/10"}>
