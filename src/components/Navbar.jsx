@@ -7,7 +7,6 @@ const navLinks = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
   { label: "Journey", path: "/journey" },
-  { label: "SWOT", path: "/swot" },
   { label: "Reflections", path: "/reflections" },
   { label: "FAQ", path: "/faq" },
 ]
@@ -30,10 +29,10 @@ export default function Navbar() {
             <Link
               key={link.path}
               to={link.path}
-              className={`px-3 py-1.5 rounded text-sm font-medium transition-colors ${
+              className={`relative px-3 py-1.5 rounded text-sm font-medium transition-all duration-200 ${
                 pathname === link.path
                   ? "bg-indigo text-cream"
-                  : "text-steel hover:text-cream hover:bg-indigo/40"
+                  : "text-steel hover:text-cream hover:bg-indigo/40 hover:-translate-y-0.5"
               }`}
             >
               {link.label}
@@ -43,7 +42,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-cream"
+          className="md:hidden text-cream transition-transform duration-200 active:scale-90"
           onClick={() => setOpen(!open)}
         >
           {open ? <X size={22} /> : <Menu size={22} />}
@@ -52,13 +51,14 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-navy border-t border-indigo/30 px-4 pb-4 flex flex-col gap-1">
-          {navLinks.map((link) => (
+        <div className="md:hidden bg-navy border-t border-indigo/30 px-4 pb-4 flex flex-col gap-1 animate-page-in">
+          {navLinks.map((link, i) => (
             <Link
               key={link.path}
               to={link.path}
               onClick={() => setOpen(false)}
-              className={`px-3 py-2 rounded text-sm font-medium transition-colors ${
+              style={{ animationDelay: `${i * 45}ms` }}
+              className={`animate-rise px-3 py-2 rounded text-sm font-medium transition-colors ${
                 pathname === link.path
                   ? "bg-indigo text-cream"
                   : "text-steel hover:text-cream hover:bg-indigo/40"

@@ -1,8 +1,9 @@
 import { useParams, Link } from "react-router-dom"
 import { useState } from "react"
-import { ArrowLeft, Calendar, ExternalLink, FileText, FileSpreadsheet, Presentation, HardDrive, Link2, ChevronLeft, ChevronRight, X, PictureInPicture } from "lucide-react"
+import { ArrowLeft, Calendar, ExternalLink, FileText, FileSpreadsheet, Presentation, HardDrive, Link2, ChevronLeft, ChevronRight, X, PictureInPicture, Paperclip, Images, ListChecks } from "lucide-react"
 import { Badge } from "../components/ui/badge"
 import { Button } from "../components/ui/button"
+import Reveal from "../components/Reveal"
 import { weeks } from "../data/content"
 
 const iconMap = {
@@ -16,31 +17,77 @@ const iconMap = {
   picture: { icon: PictureInPicture, color: "text-green-600 bg-green-100 border-green-200", label: "Image" },
 }
 
-function EntryItem({ entry }) {
-  if (entry.type === "text") {
-    return (
-      <p className="text-navy/80 leading-relaxed text-sm">{entry.content}</p>
-    )
-  }
+/*
+ * An attachment with room to explain itself. `description` says what the file
+ * is, so a reader knows what they are opening before they click it.
+ */
+function AttachmentCard({ entry }) {
+  const meta = iconMap[entry.icon] || iconMap.link
+  const Icon = meta.icon
 
-  if (entry.type === "link" || entry.type === "file") {
-    const meta = iconMap[entry.icon] || iconMap.link
-    const Icon = meta.icon
-    return (
-      <a
-        href={entry.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl border text-sm font-medium transition-all hover:shadow-sm hover:-translate-y-0.5 ${meta.color}`}
-      >
-        <Icon size={15} />
-        {entry.label}
-        <ExternalLink size={11} className="opacity-50" />
-      </a>
-    )
-  }
+  return (
+    <div className="flex items-start gap-4 bg-cream/40 border border-indigo/10 rounded-[18px] p-4 transition-all duration-300 hover:border-indigo/30 hover:shadow-sm">
+      <div className={`w-10 h-10 rounded-xl border flex items-center justify-center flex-shrink-0 ${meta.color}`}>
+        <Icon size={17} />
+      </div>
 
-  return null
+      <div className="min-w-0 flex-1">
+        <div className="flex items-center gap-2 mb-1 flex-wrap">
+          <h3 className="text-sm font-semibold text-navy">{entry.label}</h3>
+          <span className="text-[10px] uppercase tracking-widest text-steel/60 border border-indigo/15 rounded-full px-2 py-0.5">
+            {meta.label}
+          </span>
+        </div>
+
+        {entry.description && (
+          <p className="text-sm text-steel leading-relaxed mb-3">{entry.description}</p>
+        )}
+
+        <a
+          href={entry.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 text-xs font-medium text-indigo hover:text-navy transition-colors group"
+        >
+          {entry.type === "file" ? "Open file" : "Open link"}
+          <ExternalLink size={11} className="transition-transform group-hover:translate-x-0.5" />
+        </a>
+      </div>
+    </div>
+  )
+}
+
+/* A titled, described set of photos: one album per activity, not per photo. */
+function Album({ title, description, images, first }) {
+  return (
+    <div className={first ? "" : "pt-7 mt-7 border-t border-indigo/10"}>
+      {title && <h3 className="text-sm font-semibold text-navy mb-1">{title}</h3>}
+      {description && (
+        <p className="text-sm text-steel leading-relaxed mb-4">{description}</p>
+      )}
+      <ImageGallery images={images} />
+    </div>
+  )
+}
+
+/* Titled block with a divider above it. */
+function Section({ icon: Icon, title, count, children }) {
+  return (
+    <Reveal>
+      <section className="pt-8 mt-8 border-t border-indigo/10">
+        <div className="flex items-center gap-2.5 mb-5">
+          <div className="w-8 h-8 rounded-[10px] bg-cream/70 border border-indigo/15 flex items-center justify-center flex-shrink-0">
+            <Icon size={15} className="text-indigo" />
+          </div>
+          <h2 className="text-base font-semibold text-navy">{title}</h2>
+          {count != null && (
+            <span className="text-xs text-steel/60">({count})</span>
+          )}
+        </div>
+        {children}
+      </section>
+    </Reveal>
+  )
 }
 
 function ImageGallery({ images }) {
@@ -49,13 +96,14 @@ function ImageGallery({ images }) {
   if (!images || images.length === 0) return null
 
   return (
-    <div className="mt-4">
+    <>
       <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
         {images.map((src, i) => (
           <button
             key={i}
             onClick={() => setLightbox(i)}
-            className="aspect-square rounded-xl overflow-hidden border border-indigo/10 hover:border-indigo/40 hover:shadow-md transition-all group"
+            style={{ animationDelay: `${Math.min(i, 12) * 55}ms` }}
+            className="aspect-square rounded-xl overflow-hidden border border-indigo/10 hover:border-indigo/40 hover:shadow-md hover:-translate-y-0.5 transition-all group animate-rise"
           >
             <img
               src={src}
@@ -103,7 +151,7 @@ function ImageGallery({ images }) {
           </div>
         </div>
       )}
-    </div>
+    </>
   )
 }
 
@@ -123,6 +171,32 @@ export default function WeekDetail() {
   const prev = weeks.find((w) => w.id === week.id - 1)
   const next = weeks.find((w) => w.id === week.id + 1)
 
+  /* Flatten the week's days into one week-level view. */
+  const narrative = week.narrative
+  const days = week.days || []
+  const allEntries = days.flatMap((d) => d.entries || [])
+  const activities = allEntries.filter((e) => e.type === "text")
+  const attachments = allEntries.filter((e) => e.type === "link" || e.type === "file")
+
+  /*
+   * Each day that carries photos becomes one described album, so a set of
+   * images is introduced by what it actually shows rather than dumped as an
+   * unlabelled grid. Week-level `images` still render as a single untitled
+   * album, deduped since the same photo can be listed on more than one day.
+   */
+  const dayAlbums = days
+    .filter((d) => (d.images || []).length > 0)
+    .map((d) => ({
+      title: d.imagesTitle,
+      description: d.imagesDescription,
+      images: d.images,
+    }))
+  const weekLevel = week.images || []
+  const albums = weekLevel.length
+    ? [{ images: [...new Set(weekLevel)] }, ...dayAlbums]
+    : dayAlbums
+  const photoCount = albums.reduce((sum, a) => sum + a.images.length, 0)
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-14">
       <Link to="/journey" className="inline-flex items-center gap-2 text-steel hover:text-indigo text-sm mb-8 transition-colors">
@@ -140,40 +214,65 @@ export default function WeekDetail() {
       </div>
 
       {/* Highlights */}
-      <div className="flex flex-wrap gap-2 mb-10">
+      <div className="flex flex-wrap gap-2 mb-2">
         {week.highlights.map((h) => (
           <Badge key={h} className="bg-indigo/10 text-indigo border-indigo/30 rounded-full">{h}</Badge>
         ))}
       </div>
 
-      {/* Daily entries */}
-      {week.days && week.days.length > 0 ? (
-        <div className="space-y-8">
-          {week.days.map((day, di) => (
-            <div key={di} className="relative pl-6 border-l-2 border-indigo/15">
-              {/* Date dot */}
-              <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-cream border-2 border-indigo/40" />
+      {days.length > 0 ? (
+        <>
+          {narrative ? (
+            <Section icon={ListChecks} title="What I did this week">
+              {narrative.split(/\n\s*\n/).map((para, i) => (
+                <p key={i} className="text-navy/80 leading-relaxed mb-4 last:mb-0">
+                  {para.trim()}
+                </p>
+              ))}
+            </Section>
+          ) : (
+            /* Weeks without a written narrative fall back to their logged points. */
+            activities.length > 0 && (
+              <Section icon={ListChecks} title="What I did this week">
+                <ul className="space-y-3">
+                  {activities.map((entry, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm text-navy/80 leading-relaxed">
+                      <span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-indigo flex-shrink-0" />
+                      {entry.content}
+                    </li>
+                  ))}
+                </ul>
+              </Section>
+            )
+          )}
 
-              <div className="mb-3">
-                <span className="text-xs font-semibold text-indigo uppercase tracking-widest bg-indigo/8 px-3 py-1 rounded-full">
-                  {day.date}
-                </span>
-              </div>
-
-              <div className="space-y-3 ml-1">
-                {day.entries.map((entry, ei) => (
-                  <EntryItem key={ei} entry={entry} />
+          {attachments.length > 0 && (
+            <Section icon={Paperclip} title="Attachments & resources" count={attachments.length}>
+              <div className="space-y-3">
+                {attachments.map((entry, i) => (
+                  <AttachmentCard key={i} entry={entry} />
                 ))}
-
-                {/* Photos for this specific day */}
-                <ImageGallery images={day.images} />
               </div>
-            </div>
-          ))}
-        </div>
+            </Section>
+          )}
+
+          {photoCount > 0 && (
+            <Section icon={Images} title="Photos" count={photoCount}>
+              {albums.map((album, i) => (
+                <Album
+                  key={i}
+                  first={i === 0}
+                  title={album.title}
+                  description={album.description}
+                  images={album.images}
+                />
+              ))}
+            </Section>
+          )}
+        </>
       ) : (
         /* Fallback for old plain-text details */
-        <div className="bg-cream/50 border border-indigo/10 rounded-xl p-6">
+        <div className="bg-cream/50 border border-indigo/10 rounded-xl p-6 mt-8">
           <p className="text-navy/80 leading-relaxed whitespace-pre-wrap text-sm">{week.details}</p>
         </div>
       )}

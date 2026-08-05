@@ -60,6 +60,10 @@
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-page-in: page-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-pulse-ring: pulse-ring 3s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  --animate-rise: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 
   @keyframes accordion-down {
     from { height: 0; }
@@ -69,6 +73,23 @@
     from { height: var(--radix-accordion-content-height); }
     to { height: 0; }
   }
+  @keyframes page-in {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(0, -18px, 0); }
+  }
+  @keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.45; }
+    70% { opacity: 0; }
+    100% { transform: scale(1.35); opacity: 0; }
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 }
 
 @layer base {
@@ -76,9 +97,27 @@
     border-color: hsl(var(--border));
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     font-family: 'Inter Variable', 'Inter', sans-serif;
+  }
+
+  /* Honour the OS "reduce motion" setting across every animation on the site. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
