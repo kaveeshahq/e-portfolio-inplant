@@ -510,17 +510,21 @@ Overall, the first week helped me understand SUN PF, its role in nutrition relat
     id: 2,
     title: "Week 2",
     dateRange: "27 Apr – 30 Apr 2026",
-    narrative: `During the second week, I reviewed my Terms of Reference with Mr. Bandula Seenadheera and Mrs. Achintha. They explained my duties and how my work supported the activities of the division. This discussion helped me understand my responsibilities more clearly.
+    narrative: `During the second week, I started my in plant training activities in Badulla with two Civil Society Organizations. They were the Bandarawela Citizen Council and the Pioneer Community Education Development Institute. These organizations work together with SUN PF to carry out community and nutrition related activities in the Badulla District.
+
+I reviewed my Terms of Reference with Mr. Bandula Seenadheera and Mrs. Ajanthi Wijesinghe. They explained my duties and how my work supported the activities of the organizations. This discussion helped me understand my responsibilities more clearly.
 
 I then planned a Training of Trainers session and prepared a KAP questionnaire for the pilot study. The questionnaire was created to understand the knowledge, attitudes, and practices of the community about nutrition. I made sure the questions were clear, simple, and suitable for the people who would answer them.
 
-During the middle of the week, I prepared the documents and materials needed for the training session. I also arranged the presentation content in a clear order so that the participants could understand it easily.
+During the middle of the week, I prepared the documents and materials needed for the Training of Trainers session. I also arranged the presentation content in a clear order so that the participants could understand it easily.
 
-I conducted the training session within one hour and fifteen minutes. This gave me useful experience in presenting information and speaking in front of a group. It also helped me improve my confidence and communication skills. The session materials were saved in the shared folder.
+I conducted the Training of Trainers session within one hour and fifteen minutes. This gave me useful experience in presenting information and speaking in front of a group. It also helped me improve my confidence and communication skills. The session materials were saved in the shared folder.
 
-At the end of the week, I planned more sessions for the coming weeks. I also completed the Excel sheet for the meal enrichment programme and prepared an evaluation form. The evaluation form was created to check whether the sessions were useful and whether the participants gained new knowledge.
+At the end of the week, I planned more sessions for the coming weeks. I also completed an Excel sheet for the meal enrichment programme as part of SUN PF related documentation work.
 
-Overall, the second week helped me improve my planning, presentation, communication, and evaluation skills.`,
+I prepared pre evaluation and post evaluation forms for my Training of Trainers session. These forms were created to measure the knowledge of the participants before and after the session. I sent the forms and other related documents to the SUN PF head office for review and further improvement.
+
+Overall, the second week helped me understand the work carried out by the two Civil Society Organizations in Badulla. It also helped me improve my planning, presentation, communication, documentation, and evaluation skills.`,
     summary: "Field visits and community assessment activities.",
     highlights: ["Field Visit", "Community Assessment"],
     days: [
@@ -776,6 +780,14 @@ Overall, the fourth week helped me improve my knowledge of the nutrition situati
             content:
               "Prepare the summary of key findings in Badulla District after referring the literature",
           },
+          {
+            type: "file",
+            label: "Summary of Key Findings",
+            description:
+              "FBDG implementation in the Badulla area, summarised from the literature review of the district's current nutrition situation.",
+            url: "/assets/files/summary-of-key-findings-fbdg-badulla.pdf",
+            icon: "pdf",
+          },
         ],
       },
       {
@@ -822,13 +834,17 @@ Overall, the fourth week helped me improve my knowledge of the nutrition situati
 
 During the middle of the week, I joined a dry ration distribution programme at the Passara Uri Estate. On the following day, I took part in a dry ration distribution and meal enrichment programme at the Alubogolla Dithwa Safety Centre. These activities helped me understand some of the nutrition related challenges faced by estate communities, including low income, limited access to services, and difficulty in obtaining different types of food.
 
-During the final two days of the week, I gained experience in clinical nutrition assessment. I visited the Badulla SAM clinic and assisted with collecting information about children who were being screened and treated for severe acute malnutrition.
+During the final two days of the week, I visited the Badulla SAM clinic to collect data for my KAB survey from the parents of children with severe acute malnutrition. I also took part in giving a 2000 LKR allowance to the families. This allowance was given during three clinic visits for each child.
 
-On the following day, I visited the Meegahakiula outreach clinic for the same activity. This helped me understand how outreach clinics support families who live far away from district health facilities.
+The main purpose of the allowance was to encourage parents to bring their children to the clinic regularly. Some parents found it difficult to attend the clinic because of travel costs. Many of them were also daily wage earners, so they had to give more attention to their daily income. Some parents also had limited knowledge about nutrition and did not fully understand the condition of their children.
 
-These clinic visits gave me a better understanding of severe acute malnutrition and the difficulties faced by affected children and their families. I also learned that a child's nutrition condition can be influenced by factors such as family income, access to healthcare, and travelling distance.
+During the clinic visits, doctors examined the children and provided BP 100 biscuits. When the children attended the clinic continuously and followed the treatment, some children improved from severe acute malnutrition to moderate acute malnutrition. The doctors recorded and monitored this progress through clinic reports.
 
-Overall, the fifth week helped me improve the KAB questionnaire and gain practical experience in community programmes and clinical nutrition activities.`,
+On the following day, I visited the Meegahakiula outreach clinic for the same activity. This helped me understand how outreach clinics support families who have difficulty reaching district health facilities.
+
+These clinic visits gave me a better understanding of severe acute malnutrition and the difficulties faced by affected children and their families. I also learned that a child's nutrition condition can be influenced by family income, access to healthcare, and the nutrition knowledge of parents.
+
+Overall, the fifth week helped me improve the KAB questionnaire and gain practical experience in community programmes, clinic data collection, and nutrition related support activities.`,
     summary: "Dry ration distribution and SAM clinic data collection.",
     highlights: ["Dry Ration Distribution", "SAM Clinic", "Data Collection"],
     images: [],
@@ -1067,6 +1083,14 @@ Overall, the seventh week helped me improve my skills in action planning, prepar
             type: "text",
             content: "Finalize the KAB questionnaire data",
           },
+          {
+            type: "link",
+            label: "KAB Questionnaire Result Sheet",
+            description:
+              "The compiled results of the KAB questionnaire, organised from the completed forms collected during the field activities.",
+            url: "https://docs.google.com/spreadsheets/d/1-prNkZ2uYSoeiQ9592HV76mhUvB4lydR0ozLVge_OoU/edit?usp=sharing",
+            icon: "xlsx",
+          },
         ],
       },
     ],
@@ -1079,15 +1103,19 @@ Overall, the seventh week helped me improve my skills in action planning, prepar
 
 The food plate model shows the correct balance of food groups using a simple picture of a plate. This makes the information easier for people to understand than using measurements or serving sizes.
 
-I also prepared educational materials for the awareness session. I used simple words and visual content so that the information could be understood by people with different levels of knowledge.
+I also prepared educational materials for the awareness session. I used simple words and visual content so that people with different levels of knowledge could understand the information.
 
 During the week, I conducted a community awareness session in Thaldena. I presented the food plate model together with the Food Based Dietary Guidelines. I also answered questions from the participants. This session gave me practical experience in presenting my own project to a community.
 
-The session also helped me notice an improvement in my confidence compared with the first week of training. I felt more comfortable speaking in front of a group and explaining the information clearly.
+The session helped me notice an improvement in my confidence compared with the first week of training. I felt more comfortable speaking in front of a group and explaining the information clearly.
 
-At the end of the week, I visited the Passara DS Office and MOH. I discussed the Multi Sectoral Action Plan on Nutrition and learned how it is carried out at the divisional level.
+During the eighth week, I also started a market survey about the availability of fruits in the Badulla District. I decided to conduct this survey after reviewing the 24 hour food intake records of children with severe acute malnutrition. These records showed that their fruit consumption was very low.
 
-Overall, the eighth week helped me improve my skills in project preparation, presentation, community awareness, communication, and nutrition programme planning.`,
+The purpose of the survey was to identify the types of fruits available in the areas where these families lived. I visited wet markets, roadside vendors, and supermarkets in Badulla, Hali Ela, Passara, Meegahakiula, and Lunugala towns. I collected information about the fruits available in these locations.
+
+At the end of the week, I visited the Passara DS Office and MOH. I discussed the Multi Sectoral Action Plan on Nutrition and learned how it was carried out at the divisional level.
+
+Overall, the eighth week helped me improve my skills in project preparation, presentation, community awareness, communication, market surveys, and nutrition programme planning.`,
     summary: "Food plate model project and community awareness session.",
     highlights: ["Food Plate Model", "Community Awareness", "FBDGs"],
     images: [],
@@ -1099,6 +1127,14 @@ Overall, the eighth week helped me improve my skills in project preparation, pre
             type: "text",
             content:
               "Prepared final project and presentation about food plate model",
+          },
+          {
+            type: "link",
+            label: "Food Plate Model Presentation",
+            description:
+              "The presentation I prepared for my final project on the food plate model, later delivered at the Thaldena community awareness session.",
+            url: "https://docs.google.com/presentation/d/1qvRhFR8OcVCVX9g_AJs5DRNV59D177tWlydX_12tB64/edit?usp=sharing",
+            icon: "slides",
           },
         ],
       },
@@ -1170,15 +1206,17 @@ Overall, the eighth week helped me improve my skills in project preparation, pre
     id: 9,
     title: "Week 9",
     dateRange: "15 Jun – 19 Jun 2026",
-    narrative: `During the ninth week, I visited the Passara Divisional Secretariat Office and met the Divisional Secretary, Mrs. W. T. Gangani Somaweera. I also collected the 2025 Action Plan. Reviewing this plan helped me understand how activities, responsibilities, timelines, and different stakeholders are included in an official action plan.
+    narrative: `During the ninth week, I visited the Passara Divisional Secretariat Office with Mr. Bandula Seenadheera to meet the Divisional Secretary, Mrs. W. T. Gangani Somaweera. During the meeting, we were informed that the division plan was not available because it had been lost. Therefore, I could not collect the division plan. Instead, I collected the list of programmes and activities carried out by the division in 2025.
 
-On the following day, I conducted a community awareness session for the parents of preschool children. The session focused on child nutrition. I used simple explanations and encouraged the parents to ask questions and share their experiences. This helped make the session more practical and interactive.
+Reviewing this programme list helped me understand the activities completed by the Divisional Secretariat and how different programmes are organized and implemented at the divisional level.
+
+On the following day, I conducted a community awareness session for preschool children. The session mainly focused on the food plate model and the Food Based Dietary Guidelines. I used simple explanations, pictures, and practical examples to help the children understand healthy eating and the importance of including different food groups in their daily meals.
 
 During the rest of the week, I continued working on my final project. I also designed posters to support the project. I selected the most important information and presented it using simple words and clear visual content.
 
 Working on the final project for several days helped me review the knowledge and experience I had gained throughout the training period.
 
-Overall, the ninth week helped me improve my knowledge of action planning, community awareness, poster design, communication, and project preparation.`,
+Overall, the ninth week helped me improve my knowledge of divisional programmes, community awareness, poster design, communication, and project preparation.`,
     summary: "Community awareness session and final project work.",
     highlights: ["Community Awareness", "Final Project", "Posters"],
     images: [],
@@ -1192,6 +1230,14 @@ Overall, the ninth week helped me improve my knowledge of action planning, commu
               "Went to Passara DS office to meet Divisional Secretariat Mrs. W.T. Gangani Somaweera",
           },
           { type: "text", content: "Collected Action Plan in 2025" },
+          {
+            type: "link",
+            label: "2025 Action Plan",
+            description:
+              "The list of programmes and activities carried out by the Passara Divisional Secretariat during 2025.",
+            url: "https://docs.google.com/spreadsheets/d/1BKEXTjmUZMIAX8ZRm2dIgmYNInt9d5Ym25PptngZTAM/edit?usp=sharing",
+            icon: "xlsx",
+          },
         ],
       },
       {
@@ -1250,13 +1296,17 @@ Overall, the ninth week helped me improve my knowledge of action planning, commu
     id: 10,
     title: "Week 10",
     dateRange: "22 Jun – 26 Jun 2026",
-    narrative: `During the final week, I mainly worked in the office and helped to finalize the report of the dry ration distribution programme. I organized the information collected from the field activities carried out at different locations and prepared it as a single report. This task helped me understand the importance of proper documentation, because the report is used by funders, government partners, and the teams who carry out future programmes.
+    narrative: `During the final week, I mainly worked in the office and helped to finalize the report and documents related to the dry ration distribution programme.
 
-During the week, I also attended a meeting with the SUN PF head office members. This was the same team that introduced me to the organization at the beginning of the training. By this time, I had a much better understanding of their work and their role in nutrition activities.
+The list of beneficiaries was received from the MOH office. The programme supported children under five years old and breastfeeding mothers. Dry ration packs were given to them for three consecutive months. My ten week training period ended at the same time as the three month distribution programme, so I helped complete and organize the final documents related to the programme.
 
-At the end of the week, I conducted a Food Based Dietary Guidelines community awareness session for the Alubogolla Dithwa Safety Centre. I had first visited this safety centre earlier during the training as an observer. Conducting a session at the same location helped me clearly see the progress I had made during the ten week training period.
+I collected and arranged the information from the dry ration distributions carried out in different locations and prepared it as one complete report. This task helped me understand the importance of proper documentation for reviewing completed activities and planning future programmes.
 
-Overall, the final week helped me improve my skills in report preparation, documentation, community awareness, and communication.`,
+During the week, I also attended a meeting with the SUN PF head office members. This was the same team that introduced me to the organization at the beginning of my training. By this time, I had a much better understanding of their work and their role in nutrition related activities.
+
+At the end of the week, I conducted a Food Based Dietary Guidelines community awareness session at the Alubogolla Dithwa Safety Centre. I had visited this safety centre earlier in the training period. Conducting an awareness session at the same location helped me see the improvement in my confidence, communication, and presentation skills.
+
+Overall, the final week helped me improve my skills in report preparation, documentation, community awareness, and communication. It also gave me experience in completing the final records of a three month nutrition support programme.`,
     summary: "Report finalization and FBDGs community awareness session.",
     highlights: ["Report Finalization", "FBDGs", "Community Awareness"],
     images: [],
@@ -1286,6 +1336,14 @@ Overall, the final week helped me improve my skills in report preparation, docum
             description:
               "Attendance record for the FBDGs awareness session at the Alubogolla dithwa safety centre.",
             url: "/assets/files/session4.png",
+            icon: "picture",
+          },
+          {
+            type: "file",
+            label: "Poster Used in Session",
+            description:
+              "The poster I used during the Food Based Dietary Guidelines awareness session at the Alubogolla dithwa safety centre.",
+            url: "/assets/files/Slide1.JPG",
             icon: "picture",
           },
         ],
