@@ -1448,9 +1448,9 @@ Overall, the final week helped me improve my skills in report preparation, docum
           },
           {
             type: "file",
-            label: "Poster Used in Session",
+            label: "Poster Used in the Nutrition Champions Programme",
             description:
-              "The poster I used during the Food Based Dietary Guidelines awareness session at the Alubogolla dithwa safety centre.",
+              "The poster I used during the Nutrition Champions Programme, my final project conducted at the pre-school.",
             url: "/assets/files/Slide1.JPG",
             icon: "picture",
             preview: true,
