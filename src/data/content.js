@@ -1,3 +1,31 @@
+/*
+ * The organization chart shown in the About page's organization section.
+ * Globbed rather than imported by name so any of .jpg / .jpeg / .png works
+ * without editing this line, and so the page still builds (with the figure
+ * simply hidden) before the file is dropped in.
+ */
+const orgStructureImage =
+  Object.values(
+    import.meta.glob("../assets/org-structure.{jpg,jpeg,png}", {
+      eager: true,
+      import: "default",
+    })
+  )[0] ?? null;
+
+/*
+ * Week 10's gallery is globbed rather than imported file by file, so photos can
+ * be dropped into the folder without editing this module. Sorted numerically so
+ * 2.jpeg stays ahead of 10.jpeg.
+ */
+const week10Images = Object.entries(
+  import.meta.glob("../assets/weeks/week10/*.{jpg,jpeg,png,JPG,JPEG,PNG}", {
+    eager: true,
+    import: "default",
+  })
+)
+  .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
+  .map(([, src]) => src);
+
 import w2img1 from "../assets/weeks/week2/img1.jpeg";
 import w2img2 from "../assets/weeks/week2/img2.jpeg";
 import w2img3 from "../assets/weeks/week2/img3.jpeg";
@@ -13,6 +41,10 @@ import w3img6 from "../assets/weeks/week3/img6.jpeg";
 import w4img1 from "../assets/weeks/week4/img1.jpeg";
 import w4img2 from "../assets/weeks/week4/img2.jpeg";
 import w4img3 from "../assets/weeks/week4/img3.jpeg";
+import w4img4 from "../assets/weeks/week4/img4.jpeg";
+import w4img5 from "../assets/weeks/week4/img5.jpeg";
+import w4img6 from "../assets/weeks/week4/img6.jpeg";
+import w4img7 from "../assets/weeks/week4/img7.jpeg";
 import w5img1 from "../assets/weeks/week5/1.jpeg";
 import w5img2 from "../assets/weeks/week5/2.jpeg";
 import w5img3 from "../assets/weeks/week5/3.jpeg";
@@ -283,6 +315,70 @@ In-plant training is a credited course program and thus is compulsory to satisfy
     content: `The Scaling Up Nutrition People’s Forum (SUN PF) is the Civil Society Alliance (CSA) of the global Scaling Up Nutrition (SUN) Movement in Sri Lanka. It is an independent, registered civil society organization that brings together NGOs, community-based organizations, professional bodies, researchers, youth organizations, and development partners to improve nutrition and eliminate malnutrition across the country.
 
 The organization works closely with the Sri Lankan Government, United Nations agencies, civil society organizations, donors, and the private sector to strengthen national nutrition initiatives and improve the wellbeing of vulnerable communities.`,
+
+    /*
+     * The two Badulla CSOs I was actually placed with. SUN PF is the alliance
+     * above them; these are the partner organizations that hosted the work on
+     * the ground, so they are introduced before the alliance-level detail.
+     */
+    partnerOrganizations: {
+      title: "About the Organizations",
+      intro:
+        "During my in plant training, I worked with two Civil Society Organizations in Badulla.",
+      orgs: [
+        {
+          abbr: "BCC",
+          name: "Bandarawela Citizen Council",
+          founder: "Mr. E. M. Chandarasekara",
+        },
+        {
+          abbr: "PCDET",
+          name: "Pioneer Education and Community Development Institute",
+          founder: "Mr. B. S. Samarakoon",
+          founded: "1995",
+        },
+      ],
+      outro:
+        "Both organizations started working in partnership with SUN PF in 2019. They support community based nutrition and development activities in the Badulla District.",
+
+      structure: {
+        title: "Organization Structure",
+        intro: "The organization structure includes the following positions:",
+        positions: [
+          ["Executive Director", "Chairman"],
+          ["Finance Director", "Treasurer"],
+          ["Managing Director", "Secretary"],
+        ],
+        committeeIntro:
+          "These positions are supported by the Executive Committee. The Executive Committee includes:",
+        committee: [
+          "Chairperson",
+          "Secretary",
+          "Finance Deputy Chairman",
+          "Deputy Secretary",
+          "Committee Members",
+        ],
+        note: "Volunteers also support the activities and programmes carried out by the organizations.",
+        image: orgStructureImage,
+        imageCaption: "",
+      },
+
+      projects: {
+        title: "Main Projects and Activities",
+        intro:
+          "The organizations have successfully carried out several community and nutrition related programmes. These include:",
+        items: [
+          {
+            text: "Sustainable nutrition home gardening programmes at school and household level",
+          },
+          { text: "Nutrition awareness programmes for pregnant mothers" },
+          { text: "Multi Sectoral Action Plan on Nutrition project implementation" },
+          { text: "Severe Acute Malnutrition support activities", ongoing: true },
+          { text: "Meal enrichment programmes", ongoing: true },
+        ],
+        note: "The Severe Acute Malnutrition support and meal enrichment programmes are ongoing activities.",
+      },
+    },
 
     stats: [
       { value: "2014", label: "Established in Sri Lanka" },
@@ -814,6 +910,20 @@ Overall, the fourth week helped me improve my knowledge of the nutrition situati
           "Distributing dry rations alongside the meal enrichment programme at the Kanawarella safety centre, my first field activity of the week after two days of desk-based literature review.",
         images: [w4img1, w4img2, w4img3],
       },
+            {
+        date: "2026.05.14",
+        entries: [
+          {
+            type: "text",
+            content:
+              "Participated dry ration distribution and meal enrichment in Kanawarella dithwa safety center",
+          },
+        ],
+        imagesTitle: "Lunugala Vigneshwara Tamil School dithwa safety centre",
+        imagesDescription:
+          "Distributing dry rations alongside the meal enrichment programme at the Lunugala Vigneshwara Tamil School dithwa safety centre.",
+        images: [w4img4, w4img5, w4img6, w4img7],
+      },
       {
         date: "2026.05.15",
         entries: [
@@ -1302,6 +1412,8 @@ During the week, I also attended a meeting with the SUN PF head office members. 
 
 At the end of the week, I conducted a Food Based Dietary Guidelines community awareness session at the Alubogolla Dithwa Safety Centre. I had visited this safety centre earlier in the training period. Conducting an awareness session at the same location helped me see the improvement in my confidence, communication, and presentation skills.
 
+I also successfully completed and conducted my final project, the Nutrition Champions Programme.
+
 Overall, the final week helped me improve my skills in report preparation, documentation, community awareness, and communication. It also gave me experience in completing the final records of a three month nutrition support programme.`,
     summary: "Report finalization and FBDGs community awareness session.",
     highlights: ["Report Finalization", "FBDGs", "Community Awareness"],
@@ -1341,16 +1453,37 @@ Overall, the final week helped me improve my skills in report preparation, docum
               "The poster I used during the Food Based Dietary Guidelines awareness session at the Alubogolla dithwa safety centre.",
             url: "/assets/files/Slide1.JPG",
             icon: "picture",
+            preview: true,
           },
           {
             type: "video",
             label: "Animated Awareness Video",
             description:
-              "A short animated video I prepared as an educational aid, using fruit characters to encourage children to eat more fruit.",
+              "A short animated video I prepared as an educational aid, using fruit characters to encourage children to eat more fruit.I presented this video to pre school chindren and they gained knowledge about the important of eating both common and rare fruits.",
             url: "/assets/video/fruit-friends-animation.mp4",
             poster: "/assets/video/fruit-friends-animation-poster.jpg",
           },
+          {
+            type: "video",
+            label: "Final Project at the Pre-School – Part 1",
+            description:
+              "The final project conducted at the pre-school, presenting the food plate model to the children.",
+            url: "/assets/video/week10-preschool-1.mp4",
+            poster: "/assets/video/week10-preschool-1-poster.jpg",
+          },
+          {
+            type: "video",
+            label: "Final Project at the Pre-School – Part 2",
+            description:
+              "Continuation of the final project session at the pre-school, including the children's responses and activities.",
+            url: "/assets/video/week10-preschool-2.mp4",
+            poster: "/assets/video/week10-preschool-2-poster.jpg",
+          },
         ],
+        imagesTitle: "Final project conducted at the pre-school",
+        imagesDescription:
+          "Photographs from the final project session conducted at the pre-school, presenting the food plate model to the children.",
+        images: week10Images,
       },
     ],
   },
