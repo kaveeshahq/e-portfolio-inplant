@@ -1316,7 +1316,7 @@ Overall, the eighth week helped me improve my skills in project preparation, pre
 
 Reviewing this programme list helped me understand the activities completed by the Divisional Secretariat and how different programmes are organized and implemented at the divisional level.
 
-On the following day, I conducted a community awareness session for preschool children. The session mainly focused on the food plate model and the Food Based Dietary Guidelines. I used simple explanations, pictures, and practical examples to help the children understand healthy eating and the importance of including different food groups in their daily meals.
+On the following day, I conducted a community awareness session for parents of  preschool children. The session mainly focused on the food plate model and the Food Based Dietary Guidelines. I used simple explanations, pictures, and practical examples to help the parents understand healthy eating and the importance of including different food groups in their daily meals and how it affect for their children.
 
 During the rest of the week, I continued working on my final project. I also designed posters to support the project. I selected the most important information and presented it using simple words and clear visual content.
 
