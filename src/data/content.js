@@ -1109,13 +1109,9 @@ During the week, I conducted a community awareness session in Thaldena. I presen
 
 The session helped me notice an improvement in my confidence compared with the first week of training. I felt more comfortable speaking in front of a group and explaining the information clearly.
 
-During the eighth week, I also started a market survey about the availability of fruits in the Badulla District. I decided to conduct this survey after reviewing the 24 hour food intake records of children with severe acute malnutrition. These records showed that their fruit consumption was very low.
-
-The purpose of the survey was to identify the types of fruits available in the areas where these families lived. I visited wet markets, roadside vendors, and supermarkets in Badulla, Hali Ela, Passara, Meegahakiula, and Lunugala towns. I collected information about the fruits available in these locations.
-
 At the end of the week, I visited the Passara DS Office and MOH. I discussed the Multi Sectoral Action Plan on Nutrition and learned how it was carried out at the divisional level.
 
-Overall, the eighth week helped me improve my skills in project preparation, presentation, community awareness, communication, market surveys, and nutrition programme planning.`,
+Overall, the eighth week helped me improve my skills in project preparation, presentation, community awareness, communication, and nutrition programme planning.`,
     summary: "Food plate model project and community awareness session.",
     highlights: ["Food Plate Model", "Community Awareness", "FBDGs"],
     images: [],
@@ -1345,6 +1341,14 @@ Overall, the final week helped me improve my skills in report preparation, docum
               "The poster I used during the Food Based Dietary Guidelines awareness session at the Alubogolla dithwa safety centre.",
             url: "/assets/files/Slide1.JPG",
             icon: "picture",
+          },
+          {
+            type: "video",
+            label: "Animated Awareness Video",
+            description:
+              "A short animated video I prepared as an educational aid, using fruit characters to encourage children to eat more fruit.",
+            url: "/assets/video/fruit-friends-animation.mp4",
+            poster: "/assets/video/fruit-friends-animation-poster.jpg",
           },
         ],
       },
