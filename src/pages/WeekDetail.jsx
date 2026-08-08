@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom"
 import { useState } from "react"
-import { ArrowLeft, Calendar, ExternalLink, FileText, FileSpreadsheet, Presentation, HardDrive, Link2, ChevronLeft, ChevronRight, X, PictureInPicture, Paperclip, Images, ListChecks } from "lucide-react"
+import { ArrowLeft, Calendar, ExternalLink, FileText, FileSpreadsheet, Presentation, HardDrive, Link2, ChevronLeft, ChevronRight, X, PictureInPicture, Paperclip, Images, ListChecks, Clapperboard } from "lucide-react"
 import { Badge } from "../components/ui/badge"
 import { Button } from "../components/ui/button"
 import Reveal from "../components/Reveal"
@@ -54,6 +54,42 @@ function AttachmentCard({ entry }) {
         </a>
       </div>
     </div>
+  )
+}
+
+/*
+ * An inline player. `preload="metadata"` keeps the page light: the poster frame
+ * stands in until a reader actually presses play, so the clip itself is only
+ * fetched on demand.
+ */
+function VideoCard({ entry }) {
+  return (
+    <figure className="bg-cream/40 border border-indigo/10 rounded-[18px] p-4">
+      <div className="rounded-xl overflow-hidden border border-indigo/10 bg-navy">
+        <video
+          controls
+          preload="metadata"
+          playsInline
+          poster={entry.poster}
+          className="w-full h-auto block"
+        >
+          <source src={entry.url} type="video/mp4" />
+          Your browser cannot play this video.{" "}
+          <a href={entry.url} download>Download it instead</a>.
+        </video>
+      </div>
+
+      {(entry.label || entry.description) && (
+        <figcaption className="mt-3">
+          {entry.label && (
+            <h3 className="text-sm font-semibold text-navy mb-1">{entry.label}</h3>
+          )}
+          {entry.description && (
+            <p className="text-sm text-steel leading-relaxed">{entry.description}</p>
+          )}
+        </figcaption>
+      )}
+    </figure>
   )
 }
 
@@ -177,6 +213,7 @@ export default function WeekDetail() {
   const allEntries = days.flatMap((d) => d.entries || [])
   const activities = allEntries.filter((e) => e.type === "text")
   const attachments = allEntries.filter((e) => e.type === "link" || e.type === "file")
+  const videos = allEntries.filter((e) => e.type === "video")
 
   /*
    * Each day that carries photos becomes one described album, so a set of
@@ -244,6 +281,16 @@ export default function WeekDetail() {
                 </ul>
               </Section>
             )
+          )}
+
+          {videos.length > 0 && (
+            <Section icon={Clapperboard} title="Video" count={videos.length}>
+              <div className="space-y-5">
+                {videos.map((entry, i) => (
+                  <VideoCard key={i} entry={entry} />
+                ))}
+              </div>
+            </Section>
           )}
 
           {attachments.length > 0 && (
