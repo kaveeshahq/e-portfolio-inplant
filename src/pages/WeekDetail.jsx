@@ -43,6 +43,29 @@ function AttachmentCard({ entry }) {
           <p className="text-sm text-steel leading-relaxed mb-3">{entry.description}</p>
         )}
 
+        {/*
+          * An image attachment worth reading in place — a poster, a chart —
+          * shows itself rather than hiding behind "Open file". Opt in per entry
+          * with `preview: true`; the rest stay compact link rows. Still a link,
+          * so the full-resolution original is one click away.
+          */}
+        {entry.preview && (
+          <a
+            href={entry.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex justify-center mb-3 rounded-xl overflow-hidden border border-indigo/10 bg-white transition-colors hover:border-indigo/30"
+          >
+            <img
+              src={entry.url}
+              alt={entry.label}
+              loading="lazy"
+              decoding="async"
+              className="max-h-[560px] w-auto max-w-full h-auto object-contain block"
+            />
+          </a>
+        )}
+
         <a
           href={entry.url}
           target="_blank"
@@ -65,13 +88,19 @@ function AttachmentCard({ entry }) {
 function VideoCard({ entry }) {
   return (
     <figure className="bg-cream/40 border border-indigo/10 rounded-[18px] p-4">
-      <div className="rounded-xl overflow-hidden border border-indigo/10 bg-navy">
+      {/*
+        * Phone clips are portrait and landscape clips are 16:9, so the player is
+        * centred on a dark bed and capped by height rather than stretched to the
+        * card width — a portrait video blown up to full width would run well past
+        * the fold and lose quality upscaling from its native size.
+        */}
+      <div className="rounded-xl overflow-hidden border border-indigo/10 bg-navy flex justify-center">
         <video
           controls
           preload="metadata"
           playsInline
           poster={entry.poster}
-          className="w-full h-auto block"
+          className="max-h-[70vh] w-auto max-w-full block"
         >
           <source src={entry.url} type="video/mp4" />
           Your browser cannot play this video.{" "}

@@ -75,11 +75,11 @@ function Section({ icon: Icon, title, children }) {
   return (
     <Reveal>
       <section className="pt-8 mt-8 border-t border-indigo/10">
-        <div className="flex items-center gap-2.5 mb-4">
-          <div className="w-8 h-8 rounded-[10px] bg-cream/70 border border-indigo/15 flex items-center justify-center flex-shrink-0">
-            <Icon size={15} className="text-indigo" />
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-9 h-9 rounded-xl bg-cream/70 border border-indigo/15 flex items-center justify-center flex-shrink-0">
+            <Icon size={17} className="text-indigo" />
           </div>
-          <h3 className="text-base font-semibold text-navy">{title}</h3>
+          <h3 className="text-lg font-semibold text-navy leading-snug">{title}</h3>
         </div>
         {children}
       </section>
@@ -159,10 +159,46 @@ function Statement({ icon: Icon, label, text }) {
   )
 }
 
+/* One partner CSO: who they are, and who started them. */
+function OrgCard({ org }) {
+  return (
+    <div className="h-full bg-cream/50 border border-indigo/10 rounded-[18px] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-indigo/30 hover:shadow-sm">
+      <Badge className="bg-navy/5 text-navy border-navy/15 rounded-full mb-3">{org.abbr}</Badge>
+      <h4 className="text-sm font-semibold text-navy leading-snug mb-2">{org.name}</h4>
+      <p className="text-sm text-steel leading-relaxed">
+        Founded by {org.founder}
+        {org.founded ? ` in ${org.founded}` : ""}.
+      </p>
+    </div>
+  )
+}
+
+/*
+ * The same three posts carry two titles depending on which organization is
+ * naming them, so each row pairs them rather than listing six separate roles.
+ */
+function PositionPairs({ positions }) {
+  return (
+    <div className="space-y-2">
+      {positions.map(([primary, alternate]) => (
+        <div
+          key={primary}
+          className="flex flex-wrap items-center gap-x-3 gap-y-1 bg-cream/50 border border-indigo/10 rounded-[14px] px-4 py-3"
+        >
+          <span className="text-sm font-medium text-navy">{primary}</span>
+          <span className="text-steel/40 text-xs">/</span>
+          <span className="text-sm text-steel">{alternate}</span>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 export default function About() {
   const [active, setActive] = useState(null)
   const me = aboutSections.student
   const org = aboutSections.organization
+  const partners = org.partnerOrganizations
   const course = aboutSections.course
   const mapQuery = encodeURIComponent(org.office.address)
 
@@ -305,9 +341,81 @@ export default function About() {
 
           {active === "organization" && (
             <div className="bg-white border border-indigo/15 rounded-[24px] p-8 md:p-10">
-              <h2 className="text-xl font-bold text-navy mb-1">{org.title}</h2>
-              <p className="text-sm text-steel/70 mb-5">{org.name}</p>
-              <Prose text={org.content} />
+              <h2 className="text-xl font-bold text-navy mb-1.5">{org.title}</h2>
+              <p className="text-lg md:text-xl font-medium text-steel leading-snug mb-5">{org.name}</p>
+
+              <Section icon={Building2} title={partners.title}>
+                <p className="text-sm text-steel leading-relaxed mb-5">{partners.intro}</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {partners.orgs.map((o, i) => (
+                    <Reveal key={o.abbr} delay={i * 90} className="h-full">
+                      <OrgCard org={o} />
+                    </Reveal>
+                  ))}
+                </div>
+                <p className="text-sm text-steel leading-relaxed mt-5">{partners.outro}</p>
+              </Section>
+
+              <Section icon={Network} title={partners.structure.title}>
+                <p className="text-sm text-steel leading-relaxed mb-4">
+                  {partners.structure.intro}
+                </p>
+                <PositionPairs positions={partners.structure.positions} />
+
+                <p className="text-sm text-steel leading-relaxed mt-6 mb-4">
+                  {partners.structure.committeeIntro}
+                </p>
+                <BulletList items={partners.structure.committee} />
+
+                <p className="text-sm text-steel leading-relaxed mt-5">
+                  {partners.structure.note}
+                </p>
+
+                {partners.structure.image && (
+                  <figure className="mt-6">
+                    <img
+                      src={partners.structure.image}
+                      alt="Organization structure chart of the partner Civil Society Organizations"
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-auto rounded-[18px] border border-indigo/10 bg-cream/40"
+                    />
+                    {partners.structure.imageCaption && (
+                      <figcaption className="mt-3 text-xs text-steel/70 leading-relaxed">
+                        {partners.structure.imageCaption}
+                      </figcaption>
+                    )}
+                  </figure>
+                )}
+              </Section>
+
+              <Section icon={ListChecks} title={partners.projects.title}>
+                <p className="text-sm text-steel leading-relaxed mb-4">
+                  {partners.projects.intro}
+                </p>
+                <ul className="space-y-2.5">
+                  {partners.projects.items.map((item) => (
+                    <li
+                      key={item.text}
+                      className="flex items-start gap-3 text-sm text-steel leading-relaxed"
+                    >
+                      <span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-indigo flex-shrink-0" />
+                      <span>
+                        {item.text}
+                        {item.ongoing && (
+                          <span className="ml-2 align-middle text-[10px] uppercase tracking-widest text-indigo border border-indigo/25 rounded-full px-2 py-0.5 whitespace-nowrap">
+                            Ongoing
+                          </span>
+                        )}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </Section>
+
+              <Section icon={Globe} title="The Scaling Up Nutrition People’s Forum (SUN PF)">
+                <Prose text={org.content} size="text-lg" />
+              </Section>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-7">
                 {org.stats.map((s, i) => (
